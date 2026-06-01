@@ -117,13 +117,15 @@ if (form) {
             return;
         }
 
-        // 2. Log submission via PHP (for record and Netlify Honeypot compat)
+        // 2. Log submission via Web3Forms (previously PHP)
         const formData = new FormData(this);
+        formData.append('access_key', 'e6722875-71d5-4d02-bd98-9f36e7568782');
+        formData.append('subject', 'Nouveau Don — AED Congo');
         formData.append('stripe_payment_method', paymentMethod.id);
         formData.append('amount', S.amount);
         formData.append('type', S.type);
 
-        fetch("/contact.php", { // On réutilise contact.php ou un don.php dédié
+        fetch("https://api.web3forms.com/submit", {
             method: "POST",
             body: formData,
         })

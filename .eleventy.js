@@ -31,7 +31,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("data");
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy(".htaccess");
-  eleventyConfig.addPassthroughCopy("contact.php");
 
   return {
     dir: {

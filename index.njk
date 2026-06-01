@@ -259,8 +259,10 @@ keywords: "AED Congo, environnement Congo, développement durable Brazzaville, B
             </div>
             <div class="contact-card">
                 <h3>Envoyez-nous un message</h3>
-                <form id="contactForm" onsubmit="handleSubmit(event)" novalidate
-                      action="/contact.php" method="POST">
+                <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="e6722875-71d5-4d02-bd98-9f36e7568782">
+                    <input type="hidden" name="subject" value="Nouveau message — AED Congo">
+                    <input type="hidden" name="redirect" value="https://aed-congo.org/merci">
                     <p class="hidden"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
                     <div class="form-group">
                         <label for="name">Nom complet</label>
