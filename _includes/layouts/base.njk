@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="{{ lang | default('fr') }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{{ title }} | AED Congo</title>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+	
+	 <!-- SEO ESSENTIELS -->
+    <meta name="description" content="{{ description }}">
+    <meta name="keywords" content="{{ keywords }}">
+    <meta name="author" content="AED Congo - Dr LOUBAKI Eugène">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="{{ lang | default('fr') }}">
+    <meta name="geo.region" content="CG-BZV">
+    <meta name="geo.placename" content="Brazzaville">
+	
+	<!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:title" content="{{ title }} - AED Congo">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:image" content="{{ site.url }}/images/hero.jpg">
+    <meta property="og:locale" content="{{ 'en_US' if lang == 'en' else 'fr_CG' }}">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+    <meta name="twitter:title" content="{{ title }} - AED Congo">
+    <meta name="twitter:description" content="{{ description }}">
+    <meta name="twitter:image" content="{{ site.url }}/images/hero.jpg">
+	
+	<!-- Canonical & Multilingue -->
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <link rel="alternate" hreflang="fr" href="{{ site.url }}{{ page.url }}">
+    <link rel="alternate" hreflang="en" href="{{ site.url }}/en{{ page.url }}">
+    <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ page.url }}">
+
+ <!-- Preconnect pour performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
+	
+	<!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#2d5016">
+
+    <!-- Google Analytics (GA4) - RGPD COMPLIANT -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WDPBQ43ZE1"></script>
+    <script src="/js/analytics.js"></script>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NGO",
+      "name": "AED Congo",
+      "alternateName": "Action pour l'Environnement et le Développement",
+      "url": "{{ site.url }}",
+      "logo": "{{ site.url }}/images/logo.jpg",
+      "description": "ONG travaillant sur l'environnement et le développement durable en République du Congo",
+      "foundingDate": "2015",
+      "areaServed": { "@type": "Country", "name": "République du Congo" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Brazzaville",
+        "addressCountry": "CG"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+242 06 952 2851",
+        "contactType": "customer service",
+        "email": "aedcongo2015@gmail.com"
+      },
+      "sameAs": [
+        "https://facebook.com",
+        "https://twitter.com"
+      ],
+      "knowsAbout": ["Biodiversité", "Développement durable", "Convention BRS", "Mercure", "Changement climatique"]
+    }
+    </script>
+	
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    
+    {% include "header.html" %}
+
+    <main id="main-content">
+        {{ content | safe }}
+    </main>
+
+    {% include "footer.html" %}
+    {% include "cookie-banner.html" %}
+
+    <script src="/js/main.js"></script>
+    {{ scripts | safe }}
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de Confidentialité | AED Congo</title>
+    <meta name="description" content="Politique de confidentialité et protection des données personnelles - AED Congo.">
+    <meta name="robots" content="noindex, follow">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#2d5016">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #2d5016;
+            --secondary: #6b9e3e;
+            --text-primary: #1a2410;
+            --text-secondary: #4a5e30;
+            --bg-light: #f4f7ef;
+            --border: #d6e4c0;
+            --bg-white: #fff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text-primary); background: var(--bg-light); padding-bottom: 40px; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+        
+        header { background: var(--bg-white); border-bottom: 1px solid var(--border); padding: 1.5rem 0; margin-bottom: 40px; }
+        .logo-text h1 { font-family: 'Lora', serif; font-size: 1.5rem; color: var(--primary); }
+        .back-link { display: inline-block; margin-bottom: 20px; color: var(--secondary); text-decoration: none; font-weight: 600; font-size: 14px; }
+        .back-link:hover { text-decoration: underline; }
+        
+        .content-card { background: var(--bg-white); border: 1px solid var(--border); border-radius: 12px; padding: 40px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        h2 { font-family: 'Lora', serif; color: var(--primary); margin: 30px 0 15px; font-size: 1.4rem; border-bottom: 2px solid var(--bg-light); padding-bottom: 10px; }
+        h2:first-of-type { margin-top: 0; }
+        p { margin-bottom: 16px; color: var(--text-secondary); }
+        ul { margin-bottom: 16px; padding-left: 20px; color: var(--text-secondary); }
+        li { margin-bottom: 8px; }
+        
+        footer { text-align: center; margin-top: 40px; font-size: 13px; color: var(--text-secondary); }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-text">
+                <h1>AED Congo</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="/" class="back-link">← Retour à l'accueil</a>
+        
+        <div class="content-card">
+            <h1 style="font-family: 'Lora', serif; color: var(--primary); margin-bottom: 30px;">Politique de Confidentialité</h1>
+            
+            <section>
+                <h2>1. Introduction</h2>
+                <p>La protection de vos données personnelles est une priorité pour l'AED Congo. Cette politique de confidentialité vous informe sur la manière dont nous collectons, utilisons et protégeons vos données lorsque vous utilisez notre site web.</p>
+            </section>
+
+            <section>
+                <h2>2. Collecte des données</h2>
+                <p>Nous collectons des informations lorsque :</p>
+                <ul>
+                    <li>Vous remplissez un formulaire de contact (nom, email, message).</li>
+                    <li>Vous effectuez un don (via nos partenaires Stripe ou PayPal).</li>
+                    <li>Vous naviguez sur le site (données analytiques via Google Analytics).</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. Utilisation des données</h2>
+                <p>Les informations que nous collectons sont utilisées pour :</p>
+                <ul>
+                    <li>Répondre à vos demandes de contact.</li>
+                    <li>Traiter vos dons et vous envoyer les reçus fiscaux si applicable.</li>
+                    <li>Améliorer l'expérience utilisateur sur notre site.</li>
+                    <li>Analyser l'audience du site de manière anonymisée.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. Cookies</h2>
+                <p>Notre site utilise des cookies pour améliorer votre navigation et mesurer l'audience. Vous pouvez accepter ou refuser ces cookies via le bandeau de consentement qui s'affiche lors de votre première visite.</p>
+            </section>
+
+            <section>
+                <h2>5. Partage des données</h2>
+                <p>AED Congo ne vend, ne loue, ni n'échange vos données personnelles avec des tiers à des fins commerciales. Vos données peuvent être transmises uniquement aux prestataires techniques nécessaires au fonctionnement du site (hébergeur, outils de paiement).</p>
+            </section>
+
+            <section>
+                <h2>6. Vos droits</h2>
+                <p>Conformément aux réglementations sur la protection des données, vous disposez d'un droit d'accès, de rectification et de suppression de vos données personnelles. Pour exercer ces droits, contactez-nous à : <a href="mailto:aedcongo2015@gmail.com" style="color: var(--secondary);">aedcongo2015@gmail.com</a>.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> AED Congo. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

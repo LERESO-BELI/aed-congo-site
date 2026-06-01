@@ -1,0 +1,44 @@
+{
+  "actions": [
+    {
+      "id": 1,
+      "title": "Reboisement Forêt de Loubomo",
+      "date": "2023-05-15",
+      "location": "Département de la Bouenza",
+      "description": "Plantation de 500 arbres natifs pour restaurer la forêt dégradée. Formation de 25 villageois aux techniques agroforestières.",
+      "impact": "500 arbres plantés",
+      "beneficiaries": 150,
+      "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800"
+    }
+  ],
+  "campagnes": [
+    {
+      "id": 2,
+      "title": "Sensibilisation Mercure dans les Écoles",
+      "date": "2023-09-20",
+      "location": "Brazzaville",
+      "description": "Campagne de sensibilisation sur les dangers du mercure auprès de 500 élèves dans 5 écoles de Brazzaville.",
+      "impact": "500 élèves sensibilisés",
+      "beneficiaries": 500,
+      "image": "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800"
+    }
+  ],
+  "temoignages": [
+    {
+      "id": 3,
+      "title": "Témoignage PNUE Congo",
+      "author": "Dr. Marie Dupont",
+      "position": "Directrice PNUE Congo",
+      "description": "L'AED a démontré une capacité exceptionnelle à livrer des résultats mesurables. Leur approche scientifique rigoureuse est un modèle pour le secteur.",
+      "video": ""
+    }
+  ],
+  "partners": [
+    { "id": 1, "name": "Gouvernement du Congo", "icon": "🇨🇬", "url": "" },
+    { "id": 2, "name": "PNUE", "icon": "🌍", "url": "https://www.unep.org" },
+    { "id": 3, "name": "FAO", "icon": "🌾", "url": "https://www.fao.org" },
+    { "id": 4, "name": "ONG Partenaires", "icon": "🤝", "url": "" },
+    { "id": 5, "name": "Union Européenne", "icon": "🇪🇺", "url": "" },
+    { "id": 6, "name": "Banque Mondiale", "icon": "🏦", "url": "" }
+  ]
+}

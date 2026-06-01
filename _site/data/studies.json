@@ -1,0 +1,303 @@
+{
+  "brs": {
+    "title": "Conventions BRS",
+    "subtitle": "Conventions de Bâle, Rotterdam et Stockholm — Gestion des déchets dangereux et des polluants organiques persistants",
+    "icon": "🌍",
+    "image": "images/BRS.jpg",
+    "studies": [
+      {
+        "id": 101,
+        "title": "Inventaire National des Polluants Organiques Persistants (POPs) au Congo",
+        "desc": "Cette étude dresse un inventaire exhaustif des polluants organiques persistants (POPs) présents sur le territoire congolais, conformément aux obligations de la Convention de Stockholm. Elle recense les stocks de pesticides obsolètes (DDT, dieldrine, endrine) dans les entrepôts de Brazzaville et Pointe-Noire, cartographie les sites industriels émetteurs de dioxines et furanes, et propose un plan national d'élimination sur dix ans financé par le FEM. L'AED a coordonné les enquêtes de terrain dans huit départements.",
+        "year": "2023",
+        "status": "published",
+        "tags": ["Stockholm", "POPs", "Dioxines", "Pesticides obsolètes", "FEM", "Brazzaville"],
+        "authors": "AED Congo & Ministère de l'Environnement"
+      },
+      {
+        "id": 102,
+        "title": "Rapport National sur la Gestion des Déchets Dangereux — Convention de Bâle",
+        "desc": "Analyse de la conformité du Congo aux dispositions de la Convention de Bâle. L'étude évalue les flux transfrontaliers de déchets dangereux (batteries au plomb, huiles usagées, déchets électroniques), recense les capacités de traitement des deux principales décharges nationales et propose un cadre législatif de transposition de la Convention dans le droit interne congolais. Un accent particulier est mis sur les déchets issus des activités pétrolières dans le Kouilou.",
+        "year": "2022",
+        "status": "published",
+        "tags": ["Bâle", "Déchets dangereux", "Flux transfrontaliers", "Déchets électroniques", "Kouilou"],
+        "authors": "AED Congo & PNUE"
+      },
+      {
+        "id": 103,
+        "title": "Étude sur la Procédure PIC — Convention de Rotterdam",
+        "desc": "Revue des substances chimiques importées et exportées par le Congo soumises au mécanisme de consentement préalable en connaissance de cause (PIC). L'étude identifie 34 substances inscrites à l'Annexe III circulant encore sans contrôle douanier adéquat, et propose un programme de formation des agents de douane et d'inspection phytosanitaire pour sécuriser les frontières terrestres et portuaires.",
+        "year": "2021",
+        "status": "published",
+        "tags": ["Rotterdam", "PIC", "Frontières", "Phytosanitaire", "Douanes", "Substances inscrites"],
+        "authors": "AED Congo & Direction Générale des Douanes"
+      },
+      {
+        "id": 104,
+        "title": "Plan National de Mise en Œuvre des Conventions BRS — Synergie 2024-2030",
+        "desc": "Document stratégique définissant les modalités d'application synergique des trois Conventions de Bâle, Rotterdam et Stockholm au Congo pour la période 2024-2030. Le plan établit six axes prioritaires : renforcement institutionnel, inventaires continus, élimination des stocks obsolètes, alternatives aux produits chimiques dangereux, sensibilisation communautaire et suivi-évaluation. Il définit aussi le mécanisme de financement auprès du Fonds Fiduciaire des Conventions BRS.",
+        "year": "2024",
+        "status": "published",
+        "tags": ["Synergie BRS", "Plan national", "Stratégie 2030", "Gouvernance", "FEM"],
+        "authors": "AED Congo & Partenaires Gouvernementaux"
+      },
+      {
+        "id": 105,
+        "title": "Formation des Acteurs Nationaux à la Gestion Rationnelle des Produits Chimiques",
+        "desc": "Programme de renforcement de capacités déployé sur 18 mois dans le cadre des Conventions BRS. L'AED a organisé 12 ateliers réunissant 340 participants — agents des ministères de l'Environnement, de l'Industrie et de la Santé, douaniers, collectivités locales et représentants du secteur privé. Les sessions portant sur la classification des produits chimiques (SGA/GHS), les obligations déclaratives et la gestion des situations d'urgence chimique.",
+        "year": "2023",
+        "status": "published",
+        "tags": ["Formation", "Renforcement capacités", "SGA/GHS", "Urgence chimique", "Ateliers"],
+        "authors": "AED Congo, Secrétariat BRS & UNITAR"
+      },
+      {
+        "id": 106,
+        "title": "Cartographie des Sites Contaminés par les POPs dans le Bassin du Congo",
+        "desc": "Étude de terrain réalisée en collaboration avec l'Université Marien Ngouabi portant sur la géolocalisation et la caractérisation de 23 sites contaminés par des polluants organiques persistants sur l'ensemble du territoire congolais. Des analyses de sol, d'eau et de sédiments ont été effectuées en laboratoire pour établir les concentrations en PCB, aldrine et HCH. Un plan de dépollution prioritaire est proposé pour les 8 sites présentant les risques sanitaires les plus élevés.",
+        "year": "2024",
+        "status": "progress",
+        "tags": ["Cartographie", "Sites contaminés", "PCB", "Sols", "Sédiments", "Dépollution"],
+        "authors": "AED Congo & Université Marien Ngouabi"
+      }
+    ]
+  },
+  "minamata": {
+    "title": "Convention de Minamata",
+    "subtitle": "Protection de la santé humaine et de l'environnement contre les effets néfastes du mercure",
+    "icon": "💧",
+    "image": "images/Minamata sur le mercure.jpg",
+    "studies": [
+      {
+        "id": 201,
+        "title": "Évaluation de la Contamination au Mercure dans le Bassin du Congo",
+        "desc": "Étude scientifique pluridisciplinaire sur les niveaux de contamination au mercure total et au méthylmercure dans les eaux de surface, les sédiments et les espèces aquatiques du Bassin du Congo. Les prélèvements ont couvert 47 stations réparties sur les cours d'eau Congo, Sangha, Likouala et Alima. Les résultats révèlent des concentrations préoccupantes dans les poissons carnivores consommés par les communautés riveraines, justifiant des mesures immédiates de gestion du risque alimentaire.",
+        "year": "2023",
+        "status": "published",
+        "tags": ["Mercure", "Méthylmercure", "Bassin Congo", "Contamination aquatique", "Poissons", "Alimentation"],
+        "authors": "AED Congo & Université Marien Ngouabi"
+      },
+      {
+        "id": 202,
+        "title": "Inventaire National des Sources de Mercure au Congo — Rapport Initial",
+        "desc": "Recensement systématique et quantification de toutes les sources anthropiques de rejet de mercure sur le territoire national, conformément à l'Article 20 de la Convention de Minamata. Les secteurs couverts incluent : l'orpaillage artisanal (ASGM) dans les départements de la Sangha et de la Cuvette, les centrales thermiques au fioul, les cimenteries de Loutété et de Pointe-Noire, et les déchets d'amalgames dentaires. Ce rapport constitue la baseline officielle transmise au Secrétariat de la Convention.",
+        "year": "2022",
+        "status": "published",
+        "tags": ["Inventaire mercure", "ASGM", "Sources anthropiques", "Article 20", "Baseline nationale"],
+        "authors": "AED Congo & Ministère des Mines"
+      },
+      {
+        "id": 203,
+        "title": "Étude d'Impact Sanitaire — Exposition au Mercure dans les Communautés Minières",
+        "desc": "Enquête épidémiologique conduite auprès de 820 personnes dans trois sites d'orpaillage artisanal des départements de la Sangha et de la Likouala. Le dosage du mercure urinaire et capillaire révèle que 68 % des orpailleurs dépassent le seuil OMS d'exposition tolérable hebdomadaire. L'étude documente les effets neurologiques (tremblements, troubles de la mémoire) et rénaux observés, et propose un protocole de surveillance médicale semestrielle ainsi que la distribution d'équipements de protection.",
+        "year": "2023",
+        "status": "published",
+        "tags": ["Santé publique", "Orpaillage artisanal", "Méthylmercure", "Dosage biologique", "Neurologie", "EPI"],
+        "authors": "AED Congo & CHU Brazzaville"
+      },
+      {
+        "id": 204,
+        "title": "Plan National de Réduction du Mercure dans l'Orpaillage Artisanal (ASGM)",
+        "desc": "Document de politique nationale pour l'élimination progressive du mercure dans l'exploitation artisanale et à petite échelle de l'or (ASGM), en conformité avec l'Annexe C de la Convention de Minamata. Le plan présente les techniques alternatives à l'amalgamation mercurielle (gravimétrie, jig, table à secousses), un cadre de formalisation juridique du secteur, un programme de collecte et de récupération du mercure en circuit fermé, et une stratégie de communication adaptée aux communautés minières.",
+        "year": "2024",
+        "status": "published",
+        "tags": ["ASGM", "Plan national", "Amalgamation", "Alternatives", "Annexe C", "Formalisation"],
+        "authors": "AED Congo & PNUE / Programme Minamata"
+      },
+      {
+        "id": 205,
+        "title": "Sensibilisation des Communautés Riveraines aux Risques du Mercure",
+        "desc": "Campagne nationale de sensibilisation déployée dans 14 villages riverains du fleuve Congo et de ses affluents. L'AED a produit des supports pédagogiques en français et en langues locales (lingala, kituba, munukutuba) : affiches, radio-spots diffusés sur 6 stations régionales, et vidéos de démonstration des pratiques alternatives. Les séances communautaires ont touché directement 12 000 personnes, en priorité les femmes enceintes et les enfants de moins de 5 ans.",
+        "year": "2023",
+        "status": "published",
+        "tags": ["Sensibilisation", "Communautés", "Lingala", "Kituba", "Femmes enceintes", "Radio"],
+        "authors": "AED Congo & Ministère de la Santé"
+      },
+      {
+        "id": 206,
+        "title": "Étude de Faisabilité — Création d'un Laboratoire National d'Analyse du Mercure",
+        "desc": "Rapport de faisabilité technique et financière pour l'implantation d'un laboratoire accrédité d'analyse du mercure à Brazzaville, capable de réaliser les dosages nécessaires au suivi de la Convention de Minamata (mercure total dans les eaux, biotes et matrices biologiques humaines). L'étude évalue trois scénarios d'investissement, les besoins en équipement (spectromètre d'absorption atomique), en personnel qualifié et en procédures d'accréditation ISO 17025.",
+        "year": "2024",
+        "status": "progress",
+        "tags": ["Laboratoire", "Accréditation", "ISO 17025", "Spectrométrie", "Faisabilité", "Brazzaville"],
+        "authors": "AED Congo & PNUD"
+      }
+    ]
+  },
+  "ccnucc": {
+    "title": "CCNUCC",
+    "subtitle": "Convention-Cadre des Nations Unies sur les Changements Climatiques — Atténuation et adaptation au Congo",
+    "icon": "🌤️",
+    "image": "images/CCNUCC.jpg",
+    "studies": [
+      {
+        "id": 301,
+        "title": "Analyse de la Contribution Déterminée au niveau National (CDN) du Congo",
+        "desc": "Étude approfondie de la CDN révisée soumise par le Congo en 2021 dans le cadre de l'Accord de Paris. L'analyse évalue le niveau d'ambition des engagements d'atténuation (réduction des émissions de GES de 55 % en 2030 par rapport à un scénario de référence), les mesures d'adaptation dans les secteurs agriculture, eau et littoral, les mécanismes de suivi-rapport-vérification (MRV), et le gap de financement estimé à 2,7 milliards USD. L'AED a contribué au dialogue national sur le relèvement de l'ambition climatique.",
+        "year": "2023",
+        "status": "published",
+        "tags": ["CDN", "Accord de Paris", "GES", "MRV", "Ambition climatique", "Financement"],
+        "authors": "AED Congo & Ministère de l'Environnement"
+      },
+      {
+        "id": 302,
+        "title": "Rapport sur la Vulnérabilité du Congo aux Changements Climatiques",
+        "desc": "Évaluation nationale des risques climatiques réalisée à partir de modélisations CORDEX-Africa sur la période 2020-2070. L'étude identifie les principaux impacts projetés : allongement des saisons sèches dans la Bouenza et le Niari, intensification des inondations dans la Cuvette, érosion côtière accélérée à Pointe-Noire et perturbation du calendrier agricole dans la Lékoumou. Des mesures d'adaptation prioritaires sont proposées pour chacun de ces hot-spots de vulnérabilité.",
+        "year": "2022",
+        "status": "published",
+        "tags": ["Vulnérabilité", "CORDEX", "Inondations", "Sécheresse", "Côte", "Adaptation"],
+        "authors": "AED Congo & PNUD"
+      },
+      {
+        "id": 303,
+        "title": "REDD+ Congo : Potentiel de Séquestration Carbone de la Forêt Tropicale",
+        "desc": "Analyse du potentiel de la République du Congo dans le mécanisme REDD+. S'appuyant sur les données d'inventaire forestier national (IFN) et les images satellites Sentinel-2 et Landsat, l'étude quantifie le stock de carbone forestier à 24,2 GtCO2e, évalue les facteurs de déforestation (agriculture itinérante, exploitation forestière, charbon de bois) et modélise les scénarios de référence nécessaires aux paiements aux résultats. L'AED a participé aux négociations REDD+ à la COP 28 à Dubaï.",
+        "year": "2023",
+        "status": "published",
+        "tags": ["REDD+", "Carbone forestier", "Séquestration", "Déforestation", "COP28", "Satellite"],
+        "authors": "AED Congo & FAO"
+      },
+      {
+        "id": 304,
+        "title": "Stratégie Nationale Bas-Carbone du Congo à l'Horizon 2050",
+        "desc": "Vision à long terme pour la décarbonation de l'économie congolaise, élaborée dans le cadre de l'Article 4.19 de l'Accord de Paris. La stratégie fixe des trajectoires sectorielles d'émissions pour l'énergie (transition vers l'hydraulique et le solaire), les transports (électromobilité), l'agriculture (agriculture climato-intelligente) et les forêts (gestion durable). Elle définit également un cadre de gouvernance climatique nationale et des mécanismes de financement mixte (public-privé-international) pour la transition.",
+        "year": "2024",
+        "status": "published",
+        "tags": ["Bas-carbone", "2050", "Décarbonation", "Hydraulique", "Solaire", "Article 4.19"],
+        "authors": "AED Congo & Partenaires Techniques"
+      },
+      {
+        "id": 305,
+        "title": "Participation de l'AED aux Négociations Climatiques — COP & SBI/SBSTA",
+        "desc": "Rapport de participation et de plaidoyer de l'AED Congo dans les sessions des organes subsidiaires de la CCNUCC (COP 26 Glasgow, COP 27 Charm el-Cheikh, COP 28 Dubaï, SBI/SBSTA 58-60). L'AED y a défendu les positions des pays forestiers tropicaux sur la mise en œuvre de l'Article 6 (marchés carbone), le financement pertes et dommages, et l'adaptation en Afrique centrale. Des déclarations officielles ont été soumises au nom de la délégation congolaise.",
+        "year": "2024",
+        "status": "published",
+        "tags": ["COP26", "COP27", "COP28", "Article 6", "Marchés carbone", "Plaidoyer", "SBI/SBSTA"],
+        "authors": "AED Congo — Dr LOUBAKI Eugène"
+      },
+      {
+        "id": 306,
+        "title": "Bilan Carbone des Activités Humaines dans le Département de la Cuvette",
+        "desc": "Étude pilote d'établissement d'un bilan des émissions de GES à l'échelle départementale, méthodologie reproductible pour les autres départements du Congo. L'inventaire couvre les secteurs ÉNERGIE (consommation de bois-énergie et de carburants fossiles), AGRICULTURE (riziculture irriguée, élevage bovin), DÉCHETS (décharges de Makoua et Owando) et UTILISATION DES TERRES. Les résultats permettront d'identifier des projets MDP/article 6 de réduction locale.",
+        "year": "2024",
+        "status": "progress",
+        "tags": ["Bilan carbone", "GES", "Cuvette", "Bois-énergie", "Inventaire local", "MDP"],
+        "authors": "AED Congo & Conseil Départemental de la Cuvette"
+      }
+    ]
+  },
+  "saicm": {
+    "title": "SAICM",
+    "subtitle": "Approche Stratégique de la Gestion Internationale des Produits Chimiques",
+    "icon": "⚗️",
+    "image": "images/SAICM.jpg",
+    "studies": [
+      {
+        "id": 401,
+        "title": "Profil National de Gestion des Produits Chimiques au Congo",
+        "desc": "Diagnostic exhaustif du cadre légal, institutionnel et technique de gestion des produits chimiques au Congo, réalisé selon la méthodologie du Secrétariat SAICM. L'étude couvre : la législation en vigueur (Code de l'Environnement, décrets sur les pesticides), les institutions compétentes (Ministères de l'Environnement, de l'Industrie, de la Santé, des Mines), les capacités analytiques des laboratoires nationaux (LNSP, SGS Pointe-Noire), et les lacunes identifiées comme priorités du Plan d'Action National.",
+        "year": "2022",
+        "status": "published",
+        "tags": ["Profil national", "SAICM", "Législation", "LNSP", "Institutions", "Code Environnement"],
+        "authors": "AED Congo & Ministère de l'Industrie"
+      },
+      {
+        "id": 402,
+        "title": "Étude sur les Pesticides Agricoles et leur Impact Sanitaire et Environnemental",
+        "desc": "Enquête nationale conduite dans 6 zones agricoles (Niari, Bouenza, Pool, Plateaux, Cuvette-Ouest, Sangha) sur l'utilisation des pesticides dans les cultures maraîchères, cacaoyères et cotonnières. Des analyses de résidus sur 180 échantillons de légumes commercialisés à Brazzaville et Pointe-Noire révèlent des dépassements des LMR pour 23 % des produits testés. L'étude documente aussi 47 cas d'intoxications aiguës déclarés sur 12 mois et recommande un étiquetage obligatoire en langues locales.",
+        "year": "2023",
+        "status": "published",
+        "tags": ["Pesticides", "LMR", "Résidus", "Maraîchage", "Intoxications", "Étiquetage"],
+        "authors": "AED Congo & Ministère de l'Agriculture"
+      },
+      {
+        "id": 403,
+        "title": "Plan d'Action National SAICM — Gestion Rationnelle des Produits Chimiques 2024-2030",
+        "desc": "Feuille de route nationale déclinant les engagements SAICM en actions concrètes mesurables pour la période 2024-2030. Le PAN comprend 5 programmes : (1) harmonisation du cadre réglementaire, (2) renforcement des capacités d'inspection et d'analyse, (3) gestion des stocks obsolètes de pesticides (environ 400 tonnes estimées), (4) promotion de la substitution par des biopesticides, et (5) système national d'information sur les produits chimiques (SNIP). Budget estimatif : 8,5 millions USD sur 6 ans.",
+        "year": "2024",
+        "status": "published",
+        "tags": ["Plan d'action", "SAICM 2030", "Stocks obsolètes", "Biopesticides", "SNIP", "Budget"],
+        "authors": "AED Congo & Secrétariat SAICM"
+      },
+      {
+        "id": 404,
+        "title": "Atelier National de Lancement de la Vision Post-2020 sur les Produits Chimiques",
+        "desc": "Rapport de l'atelier national organisé par l'AED en partenariat avec le Ministère de l'Environnement pour présenter et discuter le cadre post-SAICM 2020 : le Cadre Mondial Chemicals & Waste. Plus de 80 représentants des secteurs public, privé et de la société civile ont participé aux travaux sur les risques émergents (perturbateurs endocriniens, nanomatériaux, plastiques chimiques) et les objectifs du nouvel instrument mondial sur la pollution chimique.",
+        "year": "2023",
+        "status": "published",
+        "tags": ["Post-2020", "Cadre mondial", "Perturbateurs endocriniens", "Nanomatériaux", "Atelier national"],
+        "authors": "AED Congo & PNUE"
+      },
+      {
+        "id": 405,
+        "title": "Enquête sur la Gestion des Déchets Médicaux Dangereux au Congo",
+        "desc": "Étude sur les pratiques de collecte, traitement et élimination des déchets médicaux dangereux (déchets piquants-coupants, liquides biologiques, médicaments périmés, produits chimiques de laboratoire) dans 24 établissements de santé de Brazzaville et Pointe-Noire. L'enquête révèle que 78 % des établissements n'appliquent pas les protocoles OMS et propose un plan d'investissement pour des incinérateurs à haute température et la formation du personnel soignant.",
+        "year": "2024",
+        "status": "progress",
+        "tags": ["Déchets médicaux", "Hôpitaux", "Incinération", "OMS", "Brazzaville", "Pointe-Noire"],
+        "authors": "AED Congo & Ministère de la Santé"
+      }
+    ]
+  },
+  "cirgl": {
+    "title": "CIRGL",
+    "subtitle": "Conférence Internationale sur la Région des Grands Lacs — Coopération environnementale transfrontalière",
+    "icon": "🏞️",
+    "image": "images/CIRGL.jpg",
+    "studies": [
+      {
+        "id": 501,
+        "title": "État de l'Environnement dans la Région des Grands Lacs — Contribution du Congo",
+        "desc": "Rapport national de contribution à l'évaluation environnementale régionale de la CIRGL, couvrant les écosystèmes frontaliers partagés avec la RDC, la RCA et l'Angola. L'étude dresse un bilan de l'état des forêts du nord-est (Sangha, Likouala), des zones humides du lac Télé et du fleuve Oubangui, évalue les pressions transfrontalières (braconnage, orpaillage illicite, feux de brousse) et identifie les mécanismes de coopération bilatérale existants à renforcer.",
+        "year": "2023",
+        "status": "published",
+        "tags": ["Grands Lacs", "Transfrontalier", "Sangha", "Oubangui", "Braconnage", "Forêts"],
+        "authors": "AED Congo & Secrétariat CIRGL"
+      },
+      {
+        "id": 502,
+        "title": "Gestion Durable des Ressources Minières dans la Région des Grands Lacs",
+        "desc": "Étude régionale sur les impacts environnementaux et sociaux de l'exploitation minière dans les zones frontalières Congo–RDC–RCA. Elle analyse les filières de coltan, de cassitérite et d'or artisanal, les mécanismes de certification ICGLR (mécanisme régional de certification), et propose des programmes de réhabilitation des sites miniers abandonnés dans la Sangha et la Likouala. L'AED représente le Congo au Comité Régional de Suivi des Ressources Naturelles de la CIRGL.",
+        "year": "2022",
+        "status": "published",
+        "tags": ["Mines", "Coltan", "Cassitérite", "ICGLR", "Certification", "Réhabilitation"],
+        "authors": "AED Congo & CIRGL / Commission Environnement"
+      },
+      {
+        "id": 503,
+        "title": "Analyse du Protocole CIRGL sur les Espaces Protégés Transfrontaliers",
+        "desc": "Analyse juridique et opérationnelle du Protocole CIRGL sur la conservation et l'exploitation durable des ressources naturelles forestières et fauniques. L'étude évalue la mise en œuvre par le Congo des engagements relatifs aux trois parcs transfrontaliers impliquant son territoire (Lac Télé-Tumba, Tri-national de la Sangha), propose des mécanismes de patrouilles conjointes avec la RDC et la RCA, et développe un modèle de partage équitable des revenus de l'écotourisme transfontalier.",
+        "year": "2023",
+        "status": "published",
+        "tags": ["Aires protégées", "Lac Télé", "Tri-national Sangha", "Protocole", "Écotourisme", "RDC"],
+        "authors": "AED Congo & UICN"
+      },
+      {
+        "id": 504,
+        "title": "Stratégie Régionale d'Adaptation aux Changements Climatiques — Contribution Congo-CIRGL",
+        "desc": "Contribution du Congo à la stratégie régionale d'adaptation climatique de la CIRGL, adoptée en 2024 lors du Sommet des Chefs d'État à Kinshasa. L'étude identifie les vulnérabilités climatiques communes aux 12 États membres dans les secteurs agriculture, eau et énergie, et propose des solutions d'adaptation basées sur les écosystèmes (AbE) transfrontaliers : restauration des mangroves, gestion des bassins versants partagés et agriculture climato-intelligente dans les zones frontalières.",
+        "year": "2024",
+        "status": "published",
+        "tags": ["Adaptation", "CIRGL", "AbE", "Bassins versants", "Mangroves", "Kinshasa 2024"],
+        "authors": "AED Congo & Partenaires CIRGL"
+      },
+      {
+        "id": 505,
+        "title": "Programme de Lutte contre le Braconnage Transfrontalier — Volet Congo",
+        "desc": "Rapport d'activité du programme PAPACO-CIRGL de lutte contre le braconnage dans les aires protégées frontalières. L'AED a coordonné la formation de 60 éco-gardes congolais aux techniques de surveillance (pièges photographiques, drones, SIG), le renforcement des postes de contrôle sur l'Oubangui et la Sangha, et l'installation d'un réseau de balises SMART dans le Parc National Odzala-Kokoua. Les résultats montrent une réduction de 34 % des incidents de braconnage sur 24 mois.",
+        "year": "2023",
+        "status": "published",
+        "tags": ["Braconnage", "Éco-gardes", "Odzala-Kokoua", "SMART", "Drones", "Oubangui"],
+        "authors": "AED Congo, PAPACO & Ministère des Eaux et Forêts"
+      },
+      {
+        "id": 506,
+        "title": "Étude sur la Gestion Intégrée du Bassin de l'Oubangui",
+        "desc": "Étude de gouvernance transfrontalière du bassin de l'Oubangui, fleuve frontière entre le Congo et la RCA sur 1 700 km. L'étude évalue les usages concurrents (pêche, navigation, orpaillage, alimentation en eau) et les conflits d'usage associés, propose un cadre de gestion intégrée des ressources en eau (GIRE) fondé sur la Commission Internationale du Bassin Congo-Oubangui-Sangha (CICOS), et identifie les investissements prioritaires pour la régulation des débits face aux étiages croissants liés aux changements climatiques.",
+        "year": "2024",
+        "status": "progress",
+        "tags": ["Oubangui", "GIRE", "CICOS", "Transfrontalier", "Pêche", "Navigation", "Étiage"],
+        "authors": "AED Congo & CICOS"
+      }
+    ]
+  }
+}

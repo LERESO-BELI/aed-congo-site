@@ -1,0 +1,72 @@
+# netlify.toml — Configuration Netlify pour AED Congo
+# Ce fichier remplace .htaccess (Netlify utilise son propre serveur, pas Apache)
+# Déposer à la racine du projet.
+
+# ── Redirections ──────────────────────────────────────────────────────────────
+[[redirects]]
+  from   = "/index.html"
+  to     = "/"
+  status = 301
+
+[[redirects]]
+  from   = "/aed-main-page.html"
+  to     = "/"
+  status = 301
+
+[[redirects]]
+  from   = "/aed-studies-improved.html"
+  to     = "/etudes"
+  status = 301
+
+[[redirects]]
+  from   = "/nos-actions.html"
+  to     = "/actions"
+  status = 301
+
+[[redirects]]
+  from   = "/page-nous-soutenir.html"
+  to     = "/nous-soutenir"
+  status = 301
+
+# ── En-têtes de sécurité HTTP (appliqués à toutes les pages) ─────────────────
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options           = "SAMEORIGIN"
+    X-XSS-Protection          = "1; mode=block"
+    X-Content-Type-Options    = "nosniff"
+    Referrer-Policy           = "strict-origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    Permissions-Policy        = "camera=(), microphone=(), geolocation=()"
+    Content-Security-Policy   = "default-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com https://images.unsplash.com https://i.imgur.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://js.stripe.com https://www.paypalobjects.com https://identity.netlify.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://images.unsplash.com https://i.imgur.com https://js.stripe.com https://raw.githubusercontent.com https://www.paypalobjects.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://api.stripe.com https://identity.netlify.com; frame-ancestors 'none'; frame-src https://js.stripe.com https://www.paypal.com; upgrade-insecure-requests;"
+
+# ── Optimisations Post-Processing ─────────────────────────────────────────────
+[build.processing]
+  skip_processing = false
+[build.processing.css]
+  bundle = true
+  minify = true
+[build.processing.js]
+  bundle = true
+  minify = true
+[build.processing.html]
+  pretty_print = false
+  minify = true
+[build.processing.images]
+  compress = true
+
+# ── Cache des assets statiques ────────────────────────────────────────────────
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"

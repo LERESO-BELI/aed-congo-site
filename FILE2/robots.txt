@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aed-congo.netlify.app/sitemap.xml

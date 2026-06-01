@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	
+   
+    <title>AED Congo | Action pour l'Environnement et le Développement</title>
+	
+	 <!-- SEO ESSENTIELS -->
+    <meta name="description" content="AED Congo œuvre pour la protection de la biodiversité, le développement durable et la gestion des ressources naturelles en République du Congo.">
+    <meta name="keywords" content="AED Congo, environnement Congo, développement durable Brazzaville, Biodiversité, Études environnementales, POPs Congo, mercure Congo, changements climatiques, Bassin du Congo, SAICM, CIRGL">
+    <meta name="author" content="AED Congo - Dr LOUBAKI Eugène">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="fr">
+    <meta name="geo.region" content="CG-BZV">
+    <meta name="geo.placename" content="Brazzaville">
+	
+	<!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aed-congo.netlify.app/">
+    <meta property="og:title" content="AED Congo - Action sur l'Environnement et le Développement">
+    <meta property="og:description" content="Association pour la protection de l'environnement et le développement durable au Congo">
+	<meta property="og:image" content="https://i.imgur.com/RYvENCb.jpg">
+    <meta property="og:locale" content="fr_CG">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://aed-congo.netlify.app/">
+    <meta name="twitter:title" content="AED Congo - Environnement et Développement">
+    <meta name="twitter:description" content="Association pour la protection de l'environnement au Congo">
+    <meta name="twitter:image" content="https://i.imgur.com/RYvENCb.jpg">
+	
+	<!-- Canonical -->
+    <link rel="canonical" href="https://aed-congo.netlify.app/">
+	
+ <!-- Preconnect pour performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+	
+	<!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #2d5016; --secondary: #6b9e3e; --text-primary: #333;
+            --text-secondary: #666; --bg-light: #f7f8fa; --bg-white: #fff;
+            --border-color: #e0e4e8; --border: #e0e4e8; --shadow-md: 0 2px 8px rgba(0,0,0,0.1); --shadow: 0 2px 8px rgba(0,0,0,0.1); --accent: #d4a017;
+        }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text-primary); background: var(--bg-light); font-size: 15px; }
+		
+		/* ════════════════════════════════════════════════════
+           HEADER AVEC LOGO
+           ════════════════════════════════════════════════════ */
+        header {
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border);
+            padding: 0.75rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+		
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+		
+		
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+		
+		/* ════════════════════════════════════════════════════
+           HEADER AVEC LOGO0
+           ════════════════════════════════════════════════════ */
+        
+		.logo {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+            color: inherit;
+            transition: opacity 0.3s;
+        }
+		
+		.logo:hover {
+            opacity: 0.8;
+        }
+		
+		.logo-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            overflow: hidden;
+            background: var(--bg-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--primary);
+        }
+        
+        .logo-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+        
+        .logo-text p {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 2px;
+        }
+		
+        
+		
+        .nav-container { display: flex; align-items: center; gap: 32px; }
+		
+        nav ul { display: flex; list-style: none; gap: 24px; }
+		
+        nav a { color: var(--text-secondary); text-decoration: none; font-weight: 500; font-size: 15px; transition: color 0.3s; padding: 8px 0; }
+		
+        nav a:hover { color: var(--primary); }
+		
+        .header-social { display: flex; gap: 8px; }
+        .header-social a { width: 32px; height: 32px; background: var(--bg-light); color: var(--text-secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+        .header-social a:hover { background: var(--secondary); color: white; }
+		
+        
+		
+		/* ════════════════════════════════════════════════════
+           HERO SECTION - STYLE "SOUTENEZ L'ACTION"
+           ════════════════════════════════════════════════════ */
+        .hero { background: linear-gradient(rgba(45, 80, 22, 0.8), rgba(26, 48, 9, 0.8)), url('https://i.imgur.com/RYvENCb.jpg'); background-size: cover; background-position: center; color: white; padding: 80px 24px; text-align: center; }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(212,160,23,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 6vw, 4rem);
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+        
+        .hero h2 .highlight {
+            color: var(--accent);
+            font-weight: 900;
+        }
+        
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            margin-bottom: 32px;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+		
+		 /* ════════════════════════════════════════════════════
+           SECTIONS
+           ════════════════════════════════════════════════════ */
+        section {
+            padding: 80px 24px;
+        }
+        
+        .section-white {
+            background: var(--bg-white);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-label {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--secondary);
+            margin-bottom: 12px;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+        
+        .section-description {
+            font-size: 16px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+		
+        .btn { padding: 10px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 14px; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; cursor: pointer; border: none; }
+        .btn-primary { background: var(--secondary); color: white; }
+        .btn-primary:hover { background: var(--primary); }
+        .btn-outline { background: transparent; color: white; border: 1.5px solid white; }
+        .btn-outline:hover { background: white; color: var(--primary); }
+		
+        .section-subtitle { font-size: 15px; color: var(--text-secondary); line-height: 1.6; max-width: 800px; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+        .about-content p { color: var(--text-secondary); margin-bottom: 16px; line-height: 1.7; }
+        .about-signature { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border-color); font-size: 14px; }
+        .about-signature strong { color: var(--text-primary); display: block; margin-bottom: 2px; }
+        .about-image { 
+            border-radius: 8px; 
+            box-shadow: var(--shadow-md); 
+            background: var(--secondary); 
+            height: 350px; 
+            position: relative; 
+            overflow: hidden;
+        }
+        .slideshow-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .slideshow-track {
+            display: flex;
+            height: 100%;
+            animation: scroll 20s linear infinite;
+        }
+        .slideshow-track:hover {
+            animation-play-state: paused;
+        }
+        .slide-item {
+            min-width: 100%;
+            height: 100%;
+            flex-shrink: 0;
+            cursor: pointer;
+            position: relative;
+        }
+        .slide-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .slide-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 20px;
+            font-size: 14px;
+            text-align: center;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox.active {
+            display: flex;
+        }
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            z-index: 2001;
+            background: rgba(0,0,0,0.5);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        .lightbox-close:hover {
+            background: rgba(0,0,0,0.8);
+        }
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            background: rgba(0,0,0,0.5);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            user-select: none;
+        }
+        .lightbox-nav:hover {
+            background: rgba(0,0,0,0.8);
+        }
+        .lightbox-prev {
+            left: 20px;
+        }
+        .lightbox-next {
+            right: 20px;
+        }
+        .lightbox-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            background: rgba(0,0,0,0.7);
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-align: center;
+        }
+        .lightbox-counter {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            background: rgba(0,0,0,0.7);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+        .card { background: var(--bg-white); border: 1px solid var(--border-color); border-radius: 8px; padding: 24px; transition: all 0.2s; }
+        .card:hover { box-shadow: var(--shadow-md); }
+        .card-icon { width: 48px; height: 48px; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; border-radius: 6px; background: var(--bg-light); }
+        .card-icon svg { width: 24px; height: 24px; stroke: var(--secondary); stroke-width: 2; fill: none; }
+        .card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; }
+        .card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+		
+        .content-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+        .convention-card { background: var(--bg-white); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; transition: all 0.2s; }
+        .convention-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+        .convention-logo { width: 100%; height: 140px; background: linear-gradient(135deg, var(--bg-light), #e8f0e3); display: flex; align-items: center; justify-content: center; font-size: 3rem; border-bottom: 1px solid var(--border-color); }
+        .convention-body { padding: 20px; }
+        .convention-body h3 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; }
+        .convention-body p { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+        .btn-link { background: var(--secondary); color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: 500; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px; }
+        .btn-link:hover { background: var(--primary); }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .contact-card { background: var(--bg-white); border: 1px solid var(--border-color); border-radius: 8px; padding: 28px; }
+        .contact-card h3 { font-size: 1.25rem; margin-bottom: 20px; font-weight: 600; }
+        .contact-item { display: flex; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--border-color); }
+        .contact-item:last-child { border-bottom: none; }
+        .contact-icon { width: 40px; height: 40px; background: var(--bg-light); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+        .contact-info-text small { display: block; font-size: 12px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; font-weight: 500; }
+        .contact-info-text span { font-size: 14px; color: var(--text-primary); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 6px; font-weight: 500; font-size: 14px; }
+        .form-group input, .form-group textarea { width: 100%; padding: 10px 12px; border: 1px solid var(--border-color); border-radius: 6px; font-family: inherit; font-size: 14px; transition: border-color 0.2s; }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--secondary); }
+        .form-group textarea { resize: vertical; min-height: 100px; }
+		
+        footer { background: var(--text-primary); color: rgba(255,255,255,0.8); padding: 32px 24px; text-align: center; font-size: 14px; }
+        @media (max-width: 768px) {
+            .header-content, .nav-container { flex-direction: column; gap: 16px; }
+            nav ul { flex-wrap: wrap; justify-content: center; gap: 12px; }
+            .hero h2 { font-size: 2rem; }
+            .about-grid, .contact-grid { grid-template-columns: 1fr; }
+            .cards-grid, .content-grid { grid-template-columns: 1fr; }
+        }
+
+    footer[role="contentinfo"] {
+        background: var(--text-primary, #333);
+        color: rgba(255,255,255,0.85);
+        padding: 48px 24px 24px;
+        font-size: 14px;
+    }
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 32px;
+    }
+    .footer-logo {
+        width: 48px; height: 48px;
+        background: var(--secondary, #6b9e3e);
+        border-radius: 8px;
+        display: flex; align-items: center; justify-content: center;
+        font-weight: 700; font-size: 1rem; color: white;
+        margin-bottom: 12px;
+    }
+    .footer-brand p { color: rgba(255,255,255,0.65); line-height: 1.7; }
+    footer h4 { color: white; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+    footer ul { list-style: none; padding: 0; }
+    footer ul li { margin-bottom: 8px; }
+    footer ul li a { color: rgba(255,255,255,0.65); text-decoration: none; transition: color 0.2s; }
+    footer ul li a:hover { color: white; }
+    .footer-contact p { color: rgba(255,255,255,0.65); margin-bottom: 6px; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; text-align: center; color: rgba(255,255,255,0.5); }
+    @media (max-width: 768px) {
+        .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+    }
+
+    /* ── HAMBURGER MOBILE MENU ── */
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 32px; height: 28px;
+        background: none; border: none;
+        cursor: pointer; padding: 0;
+        z-index: 1100;
+        aria-label: "Menu";
+    }
+    .hamburger span {
+        display: block; width: 100%; height: 3px;
+        background: var(--primary, #2d5016);
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(10px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-10px) rotate(-45deg); }
+    @media (max-width: 768px) {
+        .hamburger { display: flex; }
+        .nav-container {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0; right: 0;
+            background: white;
+            padding: 16px 24px 24px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            flex-direction: column;
+            gap: 16px;
+            z-index: 999;
+        }
+        .nav-container.open { display: flex; }
+        nav ul { flex-direction: column; gap: 4px; }
+        nav ul li a { display: block; padding: 10px 0; font-size: 16px; }
+        .header-social { justify-content: flex-start; }
+    }
+    /* ── SKIP LINK ── */
+    .skip-link {
+        position: absolute; top: -40px; left: 0;
+        background: var(--primary, #2d5016); color: white;
+        padding: 8px 16px; z-index: 9999;
+        text-decoration: none; border-radius: 0 0 6px 0;
+        font-size: 14px; transition: top 0.2s;
+    }
+    .skip-link:focus { top: 0; }
+    /* ── FOCUS VISIBLE ── */
+    :focus-visible { outline: 3px solid var(--secondary, #6b9e3e); outline-offset: 2px; border-radius: 3px; }
+    /* ── SCROLL SMOOTH ── */
+    html { scroll-behavior: smooth; }
+    .form-error { display: none; color: #e74c3c; font-size: 12px; margin-top: 4px; }
+    #formSuccess { display:none; padding:16px; background:#d4edda; color:#155724; border-radius:6px; margin-top:12px; }
+    #formError   { display:none; padding:16px; background:#f8d7da; color:#721c24; border-radius:6px; margin-top:12px; }
+    </style>
+	
+	<!-- Schema.org JSON-LD pour SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "AED Congo",
+        "description": "Action sur l'Environnement et le Développement",
+        "url": "https://aed-congo.netlify.app",
+        "logo": "https://aed-congo.netlify.app/images/logo.png",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Brazzaville",
+            "addressCountry": "CG"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+242-06-955-93-15",
+            "contactType": "customer service",
+            "email": "contact@aed-congo.org"
+        },
+        "sameAs": [
+            "https://facebook.com/aed-congo",
+            "https://twitter.com/aed_congo"
+        ]
+    }
+    </script>
+	
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    <header role="banner">
+        <div class="container">
+            <div class="header-content">
+               <a href="#presentation" class="logo">
+                    <div class="logo-image">
+                        <!-- Remplacez cette image par votre logo AED -->
+                        <img src="images/logo.jpg" alt="Logo AED Congo">
+                    </div>
+                    <div class="logo-text">
+                        <h1>AED Congo</h1>
+                        <p>Action Environnement & Développement</p>
+                    </div>
+                </a>
+                
+            <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navContainer">
+                <span></span><span></span><span></span>
+            </button>
+                <div class="nav-container" id="navContainer" role="navigation" aria-label="Navigation principale">
+                    <nav>
+                        <ul>
+                            <li><a href="#presentation">À propos</a></li>
+                            <li><a href="#objectifs">Buts</a></li>
+                            <li><a href="#activites-section">Champ d'actions</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header-social">
+                        <a href="https://facebook.com" target="_blank" title="Facebook">
+                            <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" title="Twitter/X">
+                            <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.6.75zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633z"/>
+                            </svg>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" title="YouTube">
+                            <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+    <section class="hero">
+        <div class="container">
+            <h2>Agir pour un développement durable</h2>
+            <p><span class="highlight">au cœur du Bassin du Congo</span></p>
+            <div class="hero-buttons">
+                <a href="nos-actions.html" class="btn btn-primary">Découvrir  nos Réalisations</a>
+				<a href="page-nous-soutenir.html" class="btn btn-primary">Nous soutenir</a>
+                <a href="#contact" class="btn btn-primary">Nous contacter</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="presentation" class="section-white">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="section-header">
+                        <h2 class="section-title">À propos de l'AED</h2>
+                    </div>
+                    <p>L'association Action sur l'Environnement et le Développement est une organisation à but non lucratif travaillant sur l'environnement et le développement, en collaboration avec les institutions de la République du Congo, les institutions internationales et les partenaires au développement.</p>
+                    <p>Nous prenons toutes les initiatives pour le développement harmonieux des populations en nous appuyant sur les actions liées à la protection de l'environnement et au développement durable.</p>
+                    <div class="about-signature">
+                        <strong>Dr LOUBAKI Eugène</strong>
+                        <span style="color: var(--text-secondary);">Président de l'AED</span>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="slideshow-container">
+                        <div class="slideshow-track" id="slideshowTrack">
+                            <!-- Les images seront ajoutées ici par JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="objectifs">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nos buts</h2>
+                <p class="section-subtitle">L'association Action sur l'Environnement et le Développement (AED) a pour but, de contribuer au suivi et à la mise en œuvre des principaux instruments juridiques nationaux, sous régionaux, régionaux et internationaux sur la protection de l'environnement auxquels le Congo est partie.</p>
+            </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    </div>
+                    <h3><a href="aed_studies_improved.html" class="btn btn-primary">Visibilité institutionnelle</a></h3>
+                    <p>Développer notre notoriété aux niveaux national et international</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2v20M2 7l10 5-10 5M22 7l-10 5 10 5"/></svg>
+                    </div>
+                    <h3><a href="nos-actions.html" class="btn btn-primary">Développement durable</a></h3>
+                    <p>Promouvoir les actions de développement harmonieux</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6M1 12h6m6 0h6"/></svg>
+                    </div>
+                    <h3><a href="page-nous-soutenir.html" class="btn btn-primary">Collecte de fonds</a></h3>
+					
+                    <p>Financer nos activités et projets de développement</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="activites-section" class="section-white">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Champ d'actions</h2>
+                <p class="section-subtitle">Découvrez nos principales réalisations et projets en cours :</p>
+            </div>
+            <div class="content-grid">
+                <div class="convention-card">
+                    <div class="convention-logo">
+						<img src="images/BRS.jpg" class="content-image" alt="Conventions BRS Logo" style="width: 450px; height: 150px; object-fit: contain;">
+					</div>
+                    <div class="convention-body">
+                        <h3>Conventions BRS</h3>
+                        <p>Les Conventions de Bâle, Rotterdam et Stockholm sur les produits chimiques et déchets dangereux</p>
+                        <a href="aed_studies_improved.html?convention=brs" class="btn-link">
+                            En savoir plus
+                            <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="convention-card">
+                    <div class="convention-logo">
+						<img src="images/Minamata sur le mercure.jpg" class="content-image" alt="Minamata sur le mercure Logo" style="width: 450px; height: 150px; object-fit: contain;">
+					</div>
+                    <div class="convention-body">
+                        <h3>Convention de Minamata</h3>
+                        <p>Convention internationale sur le mercure pour protéger la santé humaine et l'environnement</p>
+                        <a href="aed_studies_improved.html?convention=minamata" class="btn-link">
+                            En savoir plus
+                            <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="convention-card">
+                    <div class="convention-logo">
+							<img src="images/CCNUCC.jpg" class="content-image" alt="CCNUCC Logo" style="width: 450px; height: 150px; object-fit: contain;">
+					</div>
+                    <div class="convention-body">
+                        <h3>CCNUCC</h3>
+                        <p>Convention-Cadre des Nations Unies sur les Changements Climatiques</p>
+                        <a href="aed_studies_improved.html?convention=ccnucc" class="btn-link">
+                            En savoir plus
+                            <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="convention-card">
+                    <div class="convention-logo">
+						<img src="images/SAICM.jpg" class="content-image" alt="SAICM Logo" style="width: 450px; height: 150px; object-fit: contain;">
+					</div>
+                    <div class="convention-body">
+                        <h3>SAICM</h3>
+                        <p>Approche Stratégique de la Gestion Internationale des Produits Chimiques</p>
+                        <a href="aed_studies_improved.html?convention=saicm" class="btn-link">
+                            En savoir plus
+                            <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="convention-card">
+                    <div class="convention-logo">
+						<img src="images/CIRGL.jpg" class="content-image" alt="CIRGL Logo" style="width: 450px; height: 150px; object-fit: contain;">
+					</div>
+                    <div class="convention-body">
+                        <h3>CIRGL</h3>
+                        <p>Conférence Internationale sur la Région des Grands Lacs</p>
+                        <a href="aed_studies_improved.html?convention=cirgl" class="btn-link">
+                            En savoir plus
+                            <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-white">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contactez-nous</h2>
+                <p class="section-subtitle">N'hésitez pas à nous contacter pour toute question ou collaboration</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>Informations de contact</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-info-text">
+                            <small>Adresse</small>
+                            <span>Brazzaville, République du Congo</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-info-text">
+                            <small>Email</small>
+                            <span><a href="mailto:contact@aed-congo.org">contact@aed-congo.org</a></span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-info-text">
+                            <small>Téléphone</small>
+                            <span>+242 06 952 2851</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🕐</div>
+                        <div class="contact-info-text">
+                            <small>Horaires</small>
+                            <span>Lun - Ven : 8h00 - 17h00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <h3>Envoyez-nous un message</h3>
+                    <form id="contactForm" onsubmit="handleSubmit(event)" novalidate
+             data-netlify="true" name="contact">
+                        <input type="hidden" name="form-name" value="contact">
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" name="name" required placeholder="Votre nom" minlength="2">
+                            <div class="form-error" id="nameError">Veuillez entrer votre nom (minimum 2 caractères)</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="votre@email.com">
+                            <div class="form-error" id="emailError">Veuillez entrer une adresse email valide</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required placeholder="Votre message..." minlength="10"></textarea>
+                            <div class="form-error" id="messageError">Veuillez entrer votre message (minimum 10 caractères)</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                    </form>
+                    <div id="formSuccess" role="alert">✅ Message envoyé ! Nous vous répondrons sous 48h.</div>
+                    <div id="formError" role="alert">❌ Une erreur s'est produite. Veuillez réessayer ou écrire directement à <a href="mailto:contact@aed-congo.org">contact@aed-congo.org</a>.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <p>&copy; <span class="copyright-year"></span> AED Congo. Tous droits réservés.</p>
+            <p>Action sur l'Environnement et le Développement</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox pour agrandir les images -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visionneuse d'images">
+        <span class="lightbox-close" onclick="closeLightbox()" aria-label="Fermer">&times;</span>
+        <span class="lightbox-nav lightbox-prev" onclick="changeLightboxImage(-1)" aria-label="Image précédente">&#10094;</span>
+        <div class="lightbox-content">
+            <img id="lightboxImg" src="" alt="">
+            <div class="lightbox-counter" id="lightboxCounter" aria-live="polite"></div>
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+        <span class="lightbox-nav lightbox-next" onclick="changeLightboxImage(1)" aria-label="Image suivante">&#10095;</span>
+    </div>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXX"></script>
+    <script>
+	
+	// Fonction pour échapper le HTML et prévenir les attaques XSS
+function escapeHtml(text) {
+    const map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;'
+    };
+    return text.replace(/[&<>"']/g, m => map[m]);
+}
+
+// Utiliser lors de l'affichage des données
+const safeTitle = escapeHtml(study.title);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXX');
+    </script>
+    <script>
+	// FONCTION DE SÉCURITÉ - Protection XSS
+        function escapeHtml(text) {
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return String(text).replace(/[&<>"']/g, m => map[m]);
+        }
+        // Galerie de photos - Ajoutez vos images ici
+        const galleryImages = [
+            {
+               src: 'images/equipe.jpg',
+                caption: 'Atelier de Sensibilisation des denttistes'
+            },
+            {
+                src: 'images/congres1.jpg',
+                caption: 'Formation des communautés locales'
+            },
+            {
+                src: 'images/conference1.jpg',
+                caption: 'Atelier de Sensibilisation des denttistes'
+            },
+            {
+                src: 'images/parisvillage.jpg',
+                caption: 'Sensibilisation environnementale'
+            },
+            {
+                src: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800',
+                caption: 'Conservation des forêts'
+            }
+        ];
+
+        let currentLightboxIndex = 0;
+
+        // Initialiser le slideshow
+        function initSlideshow() {
+            const track = document.getElementById('slideshowTrack');
+            const allImages = [...galleryImages, ...galleryImages];
+            
+            allImages.forEach((img, index) => {
+                const slide = document.createElement('div');
+                slide.className = 'slide-item';
+                slide.onclick = () => openLightbox(index % galleryImages.length);
+                const imgEl = document.createElement('img');
+                imgEl.src = img.src;
+                imgEl.alt = escapeHtml(img.caption);
+                imgEl.loading = 'lazy';
+                const caption = document.createElement('div');
+                caption.className = 'slide-caption';
+                caption.textContent = img.caption;
+                slide.appendChild(imgEl);
+                slide.appendChild(caption);
+                track.appendChild(slide);
+            });
+        }
+
+        // Lightbox
+        function openLightbox(index) {
+            currentLightboxIndex = index;
+            updateLightbox();
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function changeLightboxImage(direction) {
+            currentLightboxIndex += direction;
+            if (currentLightboxIndex < 0) {
+                currentLightboxIndex = galleryImages.length - 1;
+            } else if (currentLightboxIndex >= galleryImages.length) {
+                currentLightboxIndex = 0;
+            }
+            updateLightbox();
+        }
+
+        function updateLightbox() {
+            const img = galleryImages[currentLightboxIndex];
+            document.getElementById('lightboxImg').src = img.src;
+            document.getElementById('lightboxImg').alt = escapeHtml(img.caption);
+            document.getElementById('lightboxCaption').textContent = img.caption;
+            document.getElementById('lightboxCounter').textContent = `${currentLightboxIndex + 1} / ${galleryImages.length}`;
+        }
+
+        // Navigation clavier
+        document.addEventListener('keydown', (e) => {
+            if (document.getElementById('lightbox').classList.contains('active')) {
+                if (e.key === 'ArrowLeft') changeLightboxImage(-1);
+                if (e.key === 'ArrowRight') changeLightboxImage(1);
+                if (e.key === 'Escape') closeLightbox();
+            }
+        });
+
+        document.getElementById('lightbox').addEventListener('click', (e) => {
+            if (e.target.id === 'lightbox') closeLightbox();
+        });
+
+        // VALIDATION SÉCURISÉE DU FORMULAIRE
+        function handleSubmit(e) {
+            e.preventDefault();
+            
+            // Récupération et nettoyage des données
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            // Reset des erreurs
+            document.querySelectorAll('.form-error').forEach(el => el.style.display = 'none');
+            
+            let isValid = true;
+            
+            // Validation nom
+            if (name.length < 2) {
+                document.getElementById('nameError').style.display = 'block';
+                isValid = false;
+            }
+            
+            // Validation email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                document.getElementById('emailError').style.display = 'block';
+                isValid = false;
+            }
+            
+            // Validation message
+            if (message.length < 10) {
+                document.getElementById('messageError').style.display = 'block';
+                isValid = false;
+            }
+            
+            if (!isValid) {
+                return;
+            }
+            
+            // Échapper les données pour la sécurité
+            const safeData = {
+                name: escapeHtml(name),
+                email: escapeHtml(email),
+                message: escapeHtml(message)
+            };
+            
+            // Envoi via Formspree (remplacez YOUR_FORMSPREE_ID par votre ID Formspree)
+            const btn = document.querySelector('#contactForm button[type="submit"]');
+            btn.disabled = true;
+            btn.textContent = 'Envoi en cours…';
+            
+            fetch('https://formspree.io/f/YOUR_FORMSPREE_ID', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify({ name, email, message })
+            })
+            .then(function(r) {
+                if (r.ok) {
+                    document.getElementById('contactForm').style.display = 'none';
+                    document.getElementById('formSuccess').style.display = 'block';
+                } else {
+                    docu

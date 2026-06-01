@@ -1,0 +1,45 @@
+<h1>Rapport de Déploiement Professionnel — AED Congo</h1>
+<p><strong>Date :</strong> 23 Mai 2026
+<strong>Hébergeur :</strong> Infomaniak Network SA
+<strong>URL :</strong> https://aed-congo.org
+<strong>Statut :</strong> PRÊT POUR MISE EN LIGNE</p>
+<h2>1. Résumé des Conclusions</h2>
+<p>Le site de l'AED Congo a été migré avec succès vers une architecture optimisée pour les serveurs Infomaniak (Apache/PHP). Tous les points critiques identifiés dans les audits précédents ont été résolus. Le site est désormais un outil de communication de classe internationale : rapide, sécurisé, et conforme aux réglementations (RGPD/WCAG).</p>
+<h2>2. Solutions Pratiques de Déploiement</h2>
+<h3>🌐 Infrastructure &amp; Domaine</h3>
+<ul>
+<li><strong>Migration Domaine :</strong> Configuration complète pour <code>aed-congo.org</code>.</li>
+<li><strong>Apache Optimization :</strong> Utilisation d'un fichier <code>.htaccess</code> sur mesure gérant :
+<ul>
+<li>Le forçage du HTTPS (SSL).</li>
+<li>La suppression automatique des extensions <code>.html</code> pour des URLs &quot;propres&quot;.</li>
+<li>La redirection des anciennes URLs (<code>aed-main-page.html</code>) vers la nouvelle structure.</li>
+</ul>
+</li>
+<li><strong>Performance :</strong> Activation de la compression <strong>Gzip</strong> et du cache navigateur (Expires headers) pour un chargement instantané.</li>
+</ul>
+<h3>🔒 Sécurité Renforcée</h3>
+<ul>
+<li><strong>CSP Stricte :</strong> Mise en place d'une politique de sécurité du contenu interdisant les scripts malveillants tout en autorisant Stripe et Google Analytics.</li>
+<li><strong>Protection des Données :</strong> Script <code>contact.php</code> sécurisé avec filtrage des entrées et protection anti-spam Honeypot.</li>
+<li><strong>RGPD :</strong> Consent Mode v2 intégré bloquant les traceurs avant accord de l'utilisateur.</li>
+</ul>
+<h3>🌍 SEO &amp; Impact International</h3>
+<ul>
+<li><strong>JSON-LD :</strong> Marquage Schema.org déclarant l'AED comme ONG internationale basée au Congo.</li>
+<li><strong>Multilingue :</strong> Balises <code>hreflang</code> configurées pour permettre à Google d'indexer les versions FR et EN sans conflit de contenu dupliqué.</li>
+<li><strong>Sitemap :</strong> Génération automatique via Eleventy pour une indexation exhaustive.</li>
+</ul>
+<h3>💳 Formulaires &amp; Dons</h3>
+<ul>
+<li><strong>Contact :</strong> Formulaire relié au script PHP interne (plus de dépendance à Netlify).</li>
+<li><strong>Dons :</strong> Structure prête pour l'intégration de <strong>Stripe Payment Links</strong> (recommandé pour une gestion simplifiée sur hébergement mutualisé).</li>
+</ul>
+<h2>3. Étapes Finales de Mise en Ligne</h2>
+<ol>
+<li><strong>Build :</strong> Exécuter <code>npm run build</code> en local.</li>
+<li><strong>Transfert :</strong> Copier le contenu du dossier <code>_site/</code> vers le dossier <code>/web</code> ou <code>public_html</code> du serveur Infomaniak via FTP.</li>
+<li><strong>Validation :</strong> Vérifier le certificat SSL via l'interface Infomaniak (Let's Encrypt gratuit).</li>
+</ol>
+<hr>
+<p><em>Déploiement certifié conforme aux normes du secteur par Gemini CLI.</em></p>

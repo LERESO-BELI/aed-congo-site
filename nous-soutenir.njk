@@ -1,0 +1,253 @@
+---
+layout: layouts/base.njk
+title: "Soutenez AED Congo — Don Environnement"
+description: "Faites un don pour soutenir la protection de l'environnement et le développement durable au Congo. Déduction fiscale possible."
+keywords: "don environnement Congo, parrainage écologie, soutien ONG Congo, protection Bassin du Congo, reçu fiscal"
+---
+
+<div class="page-banner">
+    <div class="container">
+        <div class="page-banner-content">
+            <h1>Soutenez l'action de l'AED Congo</h1>
+            <p><span class="highlight">Votre don finance directement la protection de la biodiversité et le développement durable au Bassin du Congo.</span></p>
+        </div>
+    </div>
+</div>
+
+<main id="main-content">
+<div class="container">
+<div class="don-layout">
+
+<!-- ─── LEFT COLUMN ─── -->
+<div>
+  <!-- Step indicators -->
+  <div class="steps-indicator" aria-label="Étapes">
+    <div class="step active" id="si1"><div class="step-num">1</div><span>Mon don</span></div>
+    <div class="step-connector" id="sc1"></div>
+    <div class="step" id="si2"><div class="step-num">2</div><span>Coordonnées</span></div>
+    <div class="step-connector" id="sc2"></div>
+    <div class="step" id="si3"><div class="step-num">3</div><span>Règlement</span></div>
+  </div>
+
+  <form id="donForm" novalidate name="soutenir" method="POST" data-stripe-key="{{ site.stripePublicKey }}">
+    <input type="hidden" name="form-name" value="soutenir">
+
+    <!-- ═══ STEP 1 ═══ -->
+    <div class="card-section" id="step1">
+      <h3><span class="step-lbl" aria-hidden="true">1</span> Je choisis mon don</h3>
+
+      <div class="don-tabs" role="tablist" aria-label="Fréquence">
+        <button type="button" class="don-tab active" id="tab-p" role="tab" aria-selected="true" onclick="switchTab('p')">💳 Don ponctuel</button>
+        <button type="button" class="don-tab" id="tab-m" role="tab" aria-selected="false" onclick="switchTab('m')">🔁 Don mensuel</button>
+      </div>
+
+      <!-- Ponctuel -->
+      <div class="tab-content active" id="panel-p" role="tabpanel">
+        <div class="amount-grid" role="group" aria-label="Montants ponctuels">
+          <button type="button" class="amount-btn" data-a="5" onclick="selAmt(this,'p')">5 €<small>soit 1,70 €</small></button>
+          <button type="button" class="amount-btn" data-a="10" onclick="selAmt(this,'p')">10 €<small>soit 3,40 €</small></button>
+          <button type="button" class="amount-btn" data-a="25" onclick="selAmt(this,'p')">25 €<small>soit 8,50 €</small></button>
+          <button type="button" class="amount-btn selected" data-a="50" onclick="selAmt(this,'p')">50 €<small>soit 17 €</small></button>
+        </div>
+        <div class="amount-libre-row">
+          <label for="libre-p">Montant libre</label>
+          <input type="number" id="libre-p" class="amount-libre-input" min="5" placeholder="Autre montant" oninput="freeAmt('p')" aria-label="Montant libre ponctuel">
+          <span class="amount-suffix">€</span>
+        </div>
+        <div class="contrepartie-box">
+          <div class="contrepartie-img">🌱</div>
+          <div class="contrepartie-text">
+            <strong>Pour tout don ≥ 50 €</strong>
+            Recevez le kit de semences nectarifères du Bassin du Congo et notre rapport annuel d'activité.
+          </div>
+        </div>
+        <div class="impact-teaser">
+          <span class="ico">🌳</span>
+          <span id="impact-txt">Avec <strong>50 €</strong>, vous financez la participation d'un expert AED à une réunion internationale sur les conventions environnementales.</span>
+        </div>
+      </div>
+
+      <!-- Mensuel -->
+      <div class="tab-content" id="panel-m" role="tabpanel">
+        <div class="amount-grid-3" role="group" aria-label="Montants mensuels">
+          <button type="button" class="amount-btn" data-a="5" onclick="selAmt(this,'m')">5 €<small>/mois</small></button>
+          <button type="button" class="amount-btn selected" data-a="10" onclick="selAmt(this,'m')">10 €<small>/mois</small></button>
+          <button type="button" class="amount-btn" data-a="25" onclick="selAmt(this,'m')">25 €<small>/mois</small></button>
+        </div>
+        <div class="amount-libre-row">
+          <label for="libre-m">Montant libre</label>
+          <input type="number" id="libre-m" class="amount-libre-input" min="3" placeholder="Autre/mois" oninput="freeAmt('m')" aria-label="Montant libre mensuel">
+          <span class="amount-suffix">€/mois</span>
+        </div>
+        <div class="contrepartie-box">
+          <div class="contrepartie-img">🤝</div>
+          <div class="contrepartie-text">
+            <strong>Pour tout don ≥ 10 €/mois</strong>
+            Devenez « Gardien de la Forêt » : accès à nos rapports exclusifs et newsletter bailleurs.
+          </div>
+        </div>
+        <div class="impact-teaser">
+          <span class="ico">♻️</span>
+          <span>Avec <strong>10 €/mois</strong>, vous permettez à l'AED de maintenir ses activités de suivi des conventions environnementales toute l'année.</span>
+        </div>
+      </div>
+    </div><!-- /step1 -->
+
+    <!-- ═══ STEP 2 ═══ -->
+    <div class="card-section" id="step2">
+      <h3><span class="step-lbl" aria-hidden="true">2</span> Mes coordonnées</h3>
+      <p class="form-hint">
+        Ces informations sont indispensables pour l'émission de votre reçu fiscal.
+        <span class="required-star">*</span> Champs obligatoires.
+      </p>
+
+      <div class="form-row single-col">
+        <div class="form-group">
+          <label class="form-label" for="email">Email <span class="required-star" aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" class="form-input" placeholder="votre@email.com" required autocomplete="email">
+          <span class="err-msg" id="e-email">Adresse email invalide.</span>
+        </div>
+      </div>
+
+      <div class="form-row single-col">
+        <div class="form-group">
+          <label class="form-label">Civilité <span class="required-star" aria-hidden="true">*</span></label>
+          <div class="civilite-group" role="radiogroup" aria-label="Civilité">
+            <div class="civ-option"><input type="radio" name="civilite" id="civ-m" value="M" checked><label for="civ-m">M.</label></div>
+            <div class="civ-option"><input type="radio" name="civilite" id="civ-mme" value="Mme"><label for="civ-mme">Mme</label></div>
+            <div class="civ-option"><input type="radio" name="civilite" id="civ-org" value="Org"><label for="civ-org">Organisation</label></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="prenom">Prénom <span class="required-star" aria-hidden="true">*</span></label>
+          <input type="text" id="prenom" name="prenom" class="form-input" placeholder="Prénom" required autocomplete="given-name">
+          <span class="err-msg" id="e-prenom">Veuillez saisir votre prénom.</span>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="nom">Nom <span class="required-star" aria-hidden="true">*</span></label>
+          <input type="text" id="nom" name="nom" class="form-input" placeholder="Nom de famille" required autocomplete="family-name">
+          <span class="err-msg" id="e-nom">Veuillez saisir votre nom.</span>
+        </div>
+      </div>
+
+      <div class="form-row single-col">
+        <div class="form-group">
+          <label class="form-label" for="adresse">Adresse <span class="required-star" aria-hidden="true">*</span></label>
+          <input type="text" id="adresse" name="adresse" class="form-input" placeholder="Numéro et rue" required autocomplete="street-address">
+          <span class="err-msg" id="e-adresse">Veuillez saisir votre adresse.</span>
+        </div>
+      </div>
+
+      <div class="form-row three">
+        <div class="form-group">
+          <label class="form-label" for="cp">Code postal <span class="required-star" aria-hidden="true">*</span></label>
+          <input type="text" id="cp" name="codePostal" class="form-input" placeholder="00000" required autocomplete="postal-code">
+          <span class="err-msg" id="e-cp">Requis.</span>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="ville">Ville <span class="required-star" aria-hidden="true">*</span></label>
+          <input type="text" id="ville" name="ville" class="form-input" placeholder="Ville" required autocomplete="address-level2">
+          <span class="err-msg" id="e-ville">Requis.</span>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="pays">Pays <span class="required-star" aria-hidden="true">*</span></label>
+          <select id="pays" name="pays" class="form-select" required autocomplete="country">
+            <option value="CG" selected>République du Congo</option>
+            <option value="CD">Congo (RDC)</option>
+            <option value="FR">France</option>
+            <option value="BE">Belgique</option>
+            <option value="CH">Suisse</option>
+            <option value="ZZ">Autre pays</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="rgpd-consent-row">
+        <input type="checkbox" id="consent_rgpd" name="consent_rgpd" required class="rgpd-checkbox">
+        <label for="consent_rgpd" class="rgpd-label">
+          J'accepte que mes données soient traitées par l'AED Congo conformément à sa <a href="/politique-confidentialite/" target="_blank">politique de confidentialité</a>. <span class="required-star">*</span>
+        </label>
+      </div>
+
+      <div class="rgpd-notice" role="note">
+        <strong>🔒 Vos coordonnées sont protégées.</strong><br>
+        Indispensables pour votre reçu fiscal, elles ne sont jamais transmises à un tiers.
+      </div>
+    </div><!-- /step2 -->
+
+    <!-- ═══ STEP 3 ═══ -->
+    <div class="card-section" id="step3">
+      <h3><span class="step-lbl" aria-hidden="true">3</span> Mon mode de règlement</h3>
+
+      <div class="pay-tabs" role="tablist" aria-label="Modes de paiement">
+        <button type="button" class="pay-tab active" id="pt-card" onclick="switchPay('card')" role="tab" aria-selected="true">💳 Carte</button>
+        <button type="button" class="pay-tab" id="pt-paypal" onclick="switchPay('paypal')" role="tab" aria-selected="false">🌐 PayPal</button>
+        <button type="button" class="pay-tab" id="pt-mobile" onclick="switchPay('mobile')" role="tab" aria-selected="false">📱 Mobile Money</button>
+      </div>
+
+      <!-- Option 1: Carte -->
+      <div class="pay-panel active" id="pp-card" role="tabpanel">
+        <div id="stripe-container">
+          <div id="card-element" class="card-element-container"></div>
+          <div id="card-errors" role="alert" class="form-error"></div>
+        </div>
+      </div>
+
+      <!-- Option 2: PayPal -->
+      <div class="pay-panel" id="pp-paypal" role="tabpanel">
+        <div id="paypal-donate-button-container" class="paypal-container"></div>
+      </div>
+
+      <!-- Option 3: Mobile Money -->
+      <div class="pay-panel" id="pp-mobile" role="tabpanel">
+        <div class="mobile-money-box">
+          <p class="fs-small text-dark-green mb-15">Transfert direct Airtel/MTN Money. Cliquez ci-dessous pour finaliser via WhatsApp.</p>
+          <a href="https://wa.me/242069522851" target="_blank" class="whatsapp-btn">💬 Finaliser via WhatsApp</a>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-submit" id="sub-btn">Finaliser mon don</button>
+      <div id="form-error-global" role="alert" class="form-error-box">Veuillez remplir tous les champs obligatoires.</div>
+    </div>
+  </form>
+
+  <div id="form-success" role="alert" class="form-success-box">
+    <h3>Merci pour votre soutien ! 🌿</h3>
+    <p>Votre don a bien été enregistré. Vous recevrez une confirmation par email.</p>
+    <a href="/" class="btn btn-primary mt-20 d-inline-block">Retour à l'accueil</a>
+  </div>
+
+</div>
+
+<!-- ─── SIDEBAR ─── -->
+<aside class="sidebar">
+  <div class="s-card">
+    <div class="s-card-hdr"><h4>Récapitulatif</h4></div>
+    <div class="s-card-body">
+      <div class="recap-amount">
+        <span id="r-amt">50</span> €
+      </div>
+      <div id="r-fiscal" class="fiscal-note">soit 17 € après déduction fiscale</div>
+    </div>
+  </div>
+
+  <div class="fiscal-card">
+    <h4>💰 Fiscalité</h4>
+    <p>
+        * La déduction fiscale à 66 % s'applique uniquement aux contribuables soumis à l'impôt sur le revenu français (Art. 200 CGI). 
+        Pour les donateurs au Congo, vérifiez les dispositions fiscales locales.
+    </p>
+  </div>
+</aside>
+
+</div>
+</div>
+</main>
+
+{% set scripts %}
+<script src="https://js.stripe.com/v3/"></script>
+<script src="/js/donate.js"></script>
+{% endset %}

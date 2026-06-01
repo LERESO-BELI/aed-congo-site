@@ -1,0 +1,103 @@
+---
+layout: layouts/base.njk
+title: "Études Environnementales & Publications"
+description: "Expertise technique sur les conventions BRS, Minamata, CCNUCC et SAICM en République du Congo."
+keywords: "études environnementales Congo, conventions BRS, mercure Congo, climat Congo, expertise écologique"
+---
+
+<section class="page-banner">
+    <div class="container">
+        <div class="page-banner-content">
+            <h1>Nos Travaux d'Études</h1>
+            <p><span class="highlight">À ce jour l'AED, a contribué à la mise en œuvre au Congo des publications et recherches sur les conventions environnementales.</span></p>
+        </div>
+    </div>
+</section>
+
+{% include "partners-banner.html" %}
+
+<div class="main">
+    <div class="container">
+        <div class="layout">
+            <aside class="sidebar">
+                <h3>Conventions</h3>
+                <ul id="conventionsList">
+                    {% for slug, convention in studies %}
+                    <li>
+                        <button class="conv-btn {% if loop.first %}active{% endif %}" data-conv="{{ slug }}" onclick="showConvention('{{ slug }}')">
+                            {{ convention.icon }} {{ convention.title }}
+                        </button>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </aside>
+            <div class="content" id="content">
+                {% for slug, convention in studies %}
+                <div id="conv-{{ slug }}" class="convention-section {% if loop.first %}active{% else %}hidden{% endif %}">
+                    <div class="content-header">
+                        <h2>{{ convention.title }}</h2>
+                        <p>{{ convention.subtitle }}</p>
+                    </div>
+                    
+                    <div class="studies-list">
+                        {% for study in convention.studies %}
+                        <article class="study-card">
+                            <div class="study-header">
+                                <span class="study-year">{{ study.year }}</span>
+                                <span class="study-status status-{{ study.status }}">
+                                    {% if study.status == 'published' %}✓ Publié{% elif study.status == 'progress' %}⚙️ En cours{% else %}📅 À venir{% endif %}
+                                </span>
+                            </div>
+                            <h3>{{ study.title }}</h3>
+                            <p class="study-desc">{{ study.desc }}</p>
+                            <div class="study-meta">
+                                <strong>Auteurs :</strong> {{ study.authors }}
+                            </div>
+                            <div class="study-tags">
+                                {% for tag in study.tags %}
+                                <span class="tag">{{ tag }}</span>
+                                {% endfor %}
+                            </div>
+                        </article>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .hidden { display: none; }
+    .convention-section.active { display: block; }
+    .conv-btn { 
+        width: 100%; text-align: left; background: none; border: none; 
+        padding: 12px 15px; cursor: pointer; border-radius: 6px;
+        color: var(--text-secondary); transition: all 0.2s;
+        font-weight: 500; font-size: 14px;
+    }
+    .conv-btn:hover { background: var(--bg-green-pale); color: var(--primary); }
+    .conv-btn.active { background: var(--secondary); color: white; }
+    
+    .study-card { 
+        background: white; border: 1px solid var(--border); 
+        border-radius: 12px; padding: 24px; margin-bottom: 24px;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .study-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .study-header { display: flex; justify-content: space-between; margin-bottom: 12px; }
+    .study-year { font-weight: 700; color: var(--secondary); }
+    .study-status { font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 20px; }
+    .status-published { background: #e6f4ea; color: #1e7e34; }
+    .status-progress { background: #fff4e5; color: #b45d00; }
+    .study-card h3 { font-family: 'Lora', serif; color: var(--primary); margin-bottom: 12px; }
+    .study-desc { color: var(--text-secondary); font-size: 14px; line-height: 1.6; margin-bottom: 16px; }
+    .study-meta { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; }
+    .study-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { background: var(--bg-light); color: var(--text-secondary); font-size: 11px; padding: 4px 10px; border-radius: 4px; border: 1px solid var(--border); }
+</style>
+
+{% set scripts %}
+<script src="/js/studies.js"></script>
+{% endset %}

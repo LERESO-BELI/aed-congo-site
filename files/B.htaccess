@@ -1,0 +1,46 @@
+# ════════════════════════════════════════════════════
+# En-têtes de sécurité HTTP — AED Congo
+# ════════════════════════════════════════════════════
+
+# Protection anti-clickjacking
+Header always set X-Frame-Options "SAMEORIGIN"
+
+# Empêcher le sniffing de type MIME
+Header always set X-Content-Type-Options "nosniff"
+
+# Politique de sécurité du contenu (CSP)
+# i.imgur.com ajouté pour les images de galerie
+Header always set Content-Security-Policy "default-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com https://images.unsplash.com https://i.imgur.com; img-src 'self' https://i.imgur.com https://images.unsplash.com data:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; frame-src https://www.paypal.com; connect-src 'self' https://formspree.io;"
+
+# HSTS – Forcer HTTPS pendant 1 an
+Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+# Politique de référence
+Header always set Referrer-Policy "no-referrer-when-downgrade"
+
+# Permissions navigateur – désactiver les API non utilisées
+Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+
+# ════════════════════════════════════════════════════
+# Redirection HTTP → HTTPS
+# ════════════════════════════════════════════════════
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ════════════════════════════════════════════════════
+# Redirections utiles
+# ════════════════════════════════════════════════════
+# Rediriger sitemap.html vers sitemap.xml (ancienne URL)
+RewriteRule ^sitemap\.html$ /sitemap.xml [R=301,L]
+
+# ════════════════════════════════════════════════════
+# Cache navigateur
+# ════════════════════════════════════════════════════
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png  "access plus 1 month"
+    ExpiresByType text/css   "access plus 1 week"
+    ExpiresByType text/html  "access plus 1 day"
+</IfModule>

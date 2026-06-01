@@ -1,0 +1,5 @@
+Ctrl+Shift+A =admin123
+
+Ctrl+Shift+E
+
+ Le projet est désormais dans un état optimal pour son déploiement. À demain !

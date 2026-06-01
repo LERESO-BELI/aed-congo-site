@@ -1,0 +1,139 @@
+---
+layout: layouts/base.njk
+title: "Nos Actions Terrain & Sensibilisation"
+description: "Découvrez les actions terrain, campagnes de sensibilisation et témoignages d'AED Congo pour la protection de l'environnement au Congo."
+keywords: "actions environnementales, sensibilisation Congo, projets écologiques Brazzaville, protection biodiversité Congo"
+---
+
+<section class="page-banner">
+   <div class="container">
+       <div class="page-banner-content">
+           <h1>Actions Terrain & Sensibilisation</h1>
+           <p><span class="highlight">Découvrez nos projets concrets pour la protection de l'environnement et le développement durable au Congo</span></p>
+       </div>
+   </div>
+</section>
+
+{% include "partners-banner.html" %}
+
+<div class="tabs-section">
+    <div class="container">
+        <div class="tabs-nav" role="tablist" aria-label="Sections d'actions">
+            <button class="tab-btn active" data-tab="actions" role="tab" aria-selected="true" aria-controls="tab-actions" id="btn-actions">📋 Actions Terrain</button>
+            <button class="tab-btn" data-tab="campagnes" role="tab" aria-selected="false" aria-controls="tab-campagnes" id="btn-campagnes">📢 Campagnes</button>
+            <button class="tab-btn" data-tab="temoignages" role="tab" aria-selected="false" aria-controls="tab-temoignages" id="btn-temoignages">🎥 Témoignages</button>
+        </div>
+    </div>
+</div>
+
+<div id="tab-actions" class="tab-content active" role="tabpanel" aria-labelledby="btn-actions">
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Projets Réalisés</div>
+                <h2 class="section-title">Nos Actions sur le Terrain</h2>
+                <p class="section-description">Des interventions concrètes pour la protection de l'environnement et l'amélioration des conditions de vie des communautés locales</p>
+            </div>
+            <div class="actions-grid">
+                {% for action in actions.actions %}
+                <article class="action-card">
+                    <div class="action-image">
+                        <img src="{{ action.image }}" alt="{{ action.title }}" loading="lazy">
+                    </div>
+                    <div class="action-body">
+                        <div class="action-meta">{{ action.date }} • {{ action.location }}</div>
+                        <h3>{{ action.title }}</h3>
+                        <p>{{ action.description }}</p>
+                        <div class="action-impact">
+                            <strong>Impact :</strong> {{ action.impact }}
+                        </div>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</div>
+
+<div id="tab-campagnes" class="tab-content hidden" role="tabpanel" aria-labelledby="btn-campagnes">
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Sensibilisation</div>
+                <h2 class="section-title">Nos Campagnes de Sensibilisation</h2>
+                <p class="section-description">Éducation environnementale et mobilisation communautaire pour un changement durable</p>
+            </div>
+            <div class="actions-grid">
+                {% for campagne in actions.campagnes %}
+                <article class="action-card">
+                    <div class="action-image">
+                        <img src="{{ campagne.image }}" alt="{{ campagne.title }}" loading="lazy">
+                    </div>
+                    <div class="action-body">
+                        <div class="action-meta">{{ campagne.date }} • {{ campagne.location }}</div>
+                        <h3>{{ campagne.title }}</h3>
+                        <p>{{ campagne.description }}</p>
+                        <div class="action-impact">
+                            <strong>Résultat :</strong> {{ campagne.impact }}
+                        </div>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</div>
+
+<div id="tab-temoignages" class="tab-content hidden" role="tabpanel" aria-labelledby="btn-temoignages">
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Voix du Terrain</div>
+                <h2 class="section-title">Témoignages & Impact</h2>
+                <p class="section-description">Écoutez ceux qui bénéficient de nos actions et participent au changement au quotidien</p>
+            </div>
+            <div class="temoignages-list">
+                {% for temoignage in actions.temoignages %}
+                <div class="quote-card">
+                    <div class="quote-icon">"</div>
+                    <p class="quote-text">{{ temoignage.description }}</p>
+                    <div class="quote-author">
+                        <strong>{{ temoignage.author }}</strong>
+                        <span>{{ temoignage.position }}</span>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</div>
+
+<style>
+    .hidden { display: none; }
+    .tabs-section { background: var(--bg-white); border-bottom: 1px solid var(--border); position: sticky; top: 112px; z-index: 100; }
+    .tabs-nav { display: flex; justify-content: center; gap: 10px; padding: 15px 0; }
+    .tab-btn { background: var(--bg-light); border: 1px solid var(--border); padding: 10px 20px; border-radius: 30px; cursor: pointer; font-weight: 600; font-size: 14px; color: var(--text-secondary); transition: all 0.2s; }
+    .tab-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+    
+    .actions-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; margin-top: 40px; }
+    .action-card { background: white; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); transition: transform 0.2s; }
+    .action-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+    .action-image { height: 200px; overflow: hidden; }
+    .action-image img { width: 100%; height: 100%; object-fit: cover; }
+    .action-body { padding: 20px; }
+    .action-meta { font-size: 12px; color: var(--secondary); font-weight: 700; margin-bottom: 10px; text-transform: uppercase; }
+    .action-card h3 { font-family: 'Lora', serif; color: var(--primary); margin-bottom: 12px; }
+    .action-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 15px; }
+    .action-impact { background: var(--bg-green-pale); padding: 10px 15px; border-radius: 6px; font-size: 13px; color: var(--primary-dark); }
+    
+    .quote-card { background: white; padding: 40px; border-radius: 12px; border: 1px solid var(--border); position: relative; max-width: 800px; margin: 0 auto 30px; }
+    .quote-icon { position: absolute; top: 10px; left: 20px; font-size: 60px; color: var(--bg-green-pale); font-family: serif; line-height: 1; }
+    .quote-text { font-style: italic; font-size: 18px; color: var(--text-primary); position: relative; z-index: 1; margin-bottom: 20px; }
+    .quote-author { border-top: 1px solid var(--border); padding-top: 15px; }
+    .quote-author strong { display: block; color: var(--primary); }
+    .quote-author span { font-size: 13px; color: var(--text-secondary); }
+</style>
+
+{% set scripts %}
+<script src="/js/actions.js"></script>
+{% endset %}

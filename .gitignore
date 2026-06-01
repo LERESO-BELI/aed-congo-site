@@ -1,0 +1,13 @@
+# Backups
+BELI@*
+~$*
+reste_a_faire.zip
+temp_reste/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Netlify
+.netlify/
+stripe_backup_code.txt

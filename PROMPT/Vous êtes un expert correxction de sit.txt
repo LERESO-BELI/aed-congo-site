@@ -1,0 +1,58 @@
+Vous êtes un expert en audit de sites web, spécialisé dans l'identification et la correction des problèmes techniques et d'optimisation, pour améliorer la performance et la sécurité des sites. dans la continuité de notre conversation,
+Votre tâche est de corriger la liste détaillée des problèmes sur mon site web(htaccess.html,aed_main_page.html,aed_studies_improved.html, nos-actions.html, page-nous-soutenir.html, robots.txt, sitemap.xml) en tenant compte des critiques, majeurs, mineurs et informations que je vais vous fournir:CRITIQUE : Le formulaire de contact ne transmet aucun email — aucun backend n'est configuré.
+CRITIQUE : Les formulaires de la page "Nous Soutenir" contiennent des URL de placeholder non remplacés (YOUR_GOOGLE_APPS_SCRIPT_ID, YOUR_MAILCHIMP_ACTION_URL).
+CRITIQUE : Les paiements Stripe et PayPal sont mentionnés sans intégration réelle SDK.
+CRITIQUE : L'adresse email est obfusquée par Cloudflare mais le service n'est pas actif en dehors du CDN Cloudflare — risque d'email invisible.
+CRITIQUE : L'image og:image pointe vers un fichier inexistant (/images/og-image.jpg).
+MAJEURE : Deux balises dupliquées sur la page d'accueil.
+MAJEURE : Le favicon est commenté (désactivé) sur toutes les pages.
+MAJEURE : Les pages nos-actions.html et page-nous-soutenir.html n'ont pas de.</li>
+<li>MAJEURE : Le sitemap.xml et robots.txt contiennent "votre-site.com" (URL de démo non remplacée).</li>
+<li>MAJEURE : Le CSP (.htaccess) n'inclut pas i.imgur.com alors que des images Imgur sont utilisées.</li>
+<li>MAJEURE : L'année du copyright est figée à 2024 — non mise à jour.</li>
+<li>MAJEURE : Conflits de règles CSS dupliquées (header, .logo-image, section, .section-header) dans la page d'accueil.</li>
+<li>MINEURE : Aucun menu hamburger/toggle mobile implémenté — navigation inutilisable sur mobile <768px.</li>
+<li>MINEURE : Attribut aria- présent uniquement sur aed_main_page.html (5 occurrences) ; absent des autres pages.</li>
+<li>MINEURE : La slideshow CSS (translateX -100%) ne supporte qu'un seul tour de boucle — animation bloquée si un seul slide.</li>
+<li>MINEURE : scroll-behavior: smooth absent ; les ancres (#presentation, #contact) défilent sans animation.</li>
+<li>INFO : L'attribut lang="fr" est correctement défini sur toutes les pages.</li>
+<li>INFO : Les balises Open Graph/Twitter Card sont présentes mais certaines images référencent des chemins relatifs inexistants.</li>
+<li>INFO : Le mot de passe admin n'est pas géré côté serveur (robots.txt exclut aed_admin_interface.html mais ce fichier n'est pas dans le périmètre de l'audit).</li>
+</ul>
+<p>Veuillez fournir des recommandations sur comment corriger ces problèmes, en priorisant ceux qui sont critiques et majeurs, et en proposant des solutions spécifiques pour chacun.</p>
+après la correction  générer les fichiers html de chaque pages corriger prêt au déploiement de mon site web 
+
+
+
+
+
+
+
+
+
+Vous êtes un expert en audit de sites web, spécialisé dans l'identification et la correction des problèmes techniques et d'optimisation. Votre expertise vous permet de fournir des recommandations claires et pratiques pour améliorer la performance et la sécurité des sites.
+Votre tâche est de dresser une liste détaillée des problèmes à corriger sur mon site web, en tenant compte des critiques, majeurs, mineurs et informations que je vais vous fournir.
+Voici les problèmes identifiés sur mon site :
+
+CRITIQUE : Le formulaire de contact ne transmet aucun email — aucun backend n'est configuré.
+CRITIQUE : Les formulaires de la page "Nous Soutenir" contiennent des URL de placeholder non remplacés (YOUR_GOOGLE_APPS_SCRIPT_ID, YOUR_MAILCHIMP_ACTION_URL).
+CRITIQUE : Les paiements Stripe et PayPal sont mentionnés sans intégration réelle SDK.
+CRITIQUE : L'adresse email est obfusquée par Cloudflare mais le service n'est pas actif en dehors du CDN Cloudflare — risque d'email invisible.
+CRITIQUE : L'image og:image pointe vers un fichier inexistant (/images/og-image.jpg).
+MAJEURE : Deux balises dupliquées sur la page d'accueil.
+MAJEURE : Le favicon est commenté (désactivé) sur toutes les pages.
+MAJEURE : Les pages nos-actions.html et page-nous-soutenir.html n'ont pas de.</li>
+<li>MAJEURE : Le sitemap.xml et robots.txt contiennent "votre-site.com" (URL de démo non remplacée).</li>
+<li>MAJEURE : Le CSP (.htaccess) n'inclut pas i.imgur.com alors que des images Imgur sont utilisées.</li>
+<li>MAJEURE : L'année du copyright est figée à 2024 — non mise à jour.</li>
+<li>MAJEURE : Conflits de règles CSS dupliquées (header, .logo-image, section, .section-header) dans la page d'accueil.</li>
+<li>MINEURE : Aucun menu hamburger/toggle mobile implémenté — navigation inutilisable sur mobile <768px.</li>
+<li>MINEURE : Attribut aria- présent uniquement sur aed_main_page.html (5 occurrences) ; absent des autres pages.</li>
+<li>MINEURE : La slideshow CSS (translateX -100%) ne supporte qu'un seul tour de boucle — animation bloquée si un seul slide.</li>
+<li>MINEURE : scroll-behavior: smooth absent ; les ancres (#presentation, #contact) défilent sans animation.</li>
+<li>INFO : L'attribut lang="fr" est correctement défini sur toutes les pages.</li>
+<li>INFO : Les balises Open Graph/Twitter Card sont présentes mais certaines images référencent des chemins relatifs inexistants.</li>
+<li>INFO : Le mot de passe admin n'est pas géré côté serveur (robots.txt exclut aed_admin_interface.html mais ce fichier n'est pas dans le périmètre de l'audit).</li>
+</ul>
+<p>Veuillez fournir des recommandations sur comment corriger ces problèmes, en priorisant ceux qui sont critiques et majeurs, et en proposant des solutions spécifiques pour chacun.</p>
+
