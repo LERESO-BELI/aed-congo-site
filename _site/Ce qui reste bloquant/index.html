@@ -1,9 +1,0 @@
-<p>Ce qui reste bloquant (3 points non résolus)
-Bug #1 — Attribut lang sur <html> — NON VÉRIFIÉ
-Le front matter lang: fr existe dans index.njk, mais cela ne sert à rien si _includes/layouts/base.njk ne l'utilise pas. Ce fichier n'a pas été fourni. C'est le correctif le plus simple et le plus important du projet — sans lui, WCAG et le SEO sont en défaut. Vous devez vérifier que base.njk contient bien <html lang="fr">.
-Bug #4 — Styles inline toujours présents
-nous-soutenir.njk contient encore 19 attributs style=&quot;...&quot; et index.njk en contient encore 10. Ce n'est pas bloquant pour la mise en ligne, mais cela viole votre propre CLAUDE.md et empêche de durcir la CSP. La ligne 'unsafe-inline' reste donc dans votre .htaccess.
-Bug #5 — Logique de paiement Stripe absente
-nous-soutenir.njk appelle bien /js/donate.js, mais ce fichier n'a pas été fourni à la vérification. D'après l'audit initial, la logique stripe.createPaymentMethod() n'y était pas implémentée. Si donate.js n'a pas été mis à jour, le bouton &quot;Finaliser mon don&quot; ne traite aucun paiement. Les dons par carte seraient silencieusement non fonctionnels en production.
-Le site peut être mis en ligne dans l'état actuel pour une présentation institutionnelle et le formulaire de contact. Mais n'activez pas la page de don tant que vous n'avez pas confirmé que donate.js contient la logique Stripe complète — un bouton qui prend les coordonnées bancaires sans traiter le paiement est pire que pas de bouton du tout.
-La première action avant toute mise en ligne : ouvrez _includes/layouts/base.njk et vérifiez que la balise <html> contient l'attribut lang.</p>

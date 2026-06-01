@@ -11,3 +11,5 @@ Thumbs.db
 # Netlify
 .netlify/
 stripe_backup_code.txt
+node_modules/
+_site/
