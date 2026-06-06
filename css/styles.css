@@ -34,7 +34,7 @@ body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text-pri
 .d-inline-block { display: inline-block !important; }
 .d-block { display: block !important; }
 .d-flex { display: flex !important; }
-.d-none { display: none !important; }
+.d-none, .hidden { display: none !important; }
 .mx-auto { margin-left: auto !important; margin-right: auto !important; }
 .mt-10 { margin-top: 10px !important; }
 .mt-20 { margin-top: 20px !important; }

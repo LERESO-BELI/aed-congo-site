@@ -1,0 +1,26 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="section-white">
+    <div class="container max-w-900">
+        <a href="/" class="btn-link d-flex gap-10 mb-30 fw-600 fs-small">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+            Retour à l'accueil
+        </a>
+
+        <article class="card-section">
+            <h1 class="mb-30">{{ title }}</h1>
+            {{ content | safe }}
+        </article>
+    </div>
+</div>
+
+<style>
+    .card-section h1 { font-family: 'Playfair Display', serif; color: var(--primary); }
+    .card-section h2 { font-family: 'Lora', serif; color: var(--primary); margin: 30px 0 15px; font-size: 1.4rem; border-bottom: 2px solid var(--bg-light); padding-bottom: 10px; }
+    .card-section ul { padding-left: 20px; }
+    .card-section a { text-decoration: none; }
+</style>

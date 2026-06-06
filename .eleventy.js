@@ -1,4 +1,25 @@
 module.exports = function(eleventyConfig) {
+  eleventyConfig.addGlobalData("web3formsKey", process.env.WEB3FORMS_KEY || "e6722875-71d5-4d02-bd98-9f36e7568782");
+
+  // Collections optimisées
+  eleventyConfig.addCollection("studies", col =>
+    col.getFilteredByGlob("content/studies/*.md")
+       .sort((a, b) => b.data.year - a.data.year));
+
+  eleventyConfig.addCollection("actions_list", col =>
+    col.getFilteredByGlob("content/actions/*.md")
+       .filter(i => i.data.type === "action")
+       .sort((a, b) => new Date(b.data.date) - new Date(a.data.date)));
+
+  eleventyConfig.addCollection("campagnes", col =>
+    col.getFilteredByGlob("content/actions/*.md")
+       .filter(i => i.data.type === "campagne")
+       .sort((a, b) => new Date(b.data.date) - new Date(a.data.date)));
+
+  eleventyConfig.addCollection("temoignages", col =>
+    col.getFilteredByGlob("content/actions/*.md")
+       .filter(i => i.data.type === "temoignage"));
+
   // Ignorer les fichiers de documentation ou temporaires qui causent des erreurs Nunjucks
   eleventyConfig.ignores.add("rapport-audit-aed-congo.md");
   eleventyConfig.ignores.add("rapport-deploiement-aed-congo.md");
@@ -34,8 +55,9 @@ module.exports = function(eleventyConfig) {
 
   return {
     dir: {
-      input: ".",
-      includes: "_includes",
+      input: "content",
+      includes: "../_includes",
+      data: "../_data",
       output: "_site"
     },
     templateFormats: ["html", "njk", "md"],

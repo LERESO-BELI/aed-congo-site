@@ -1,0 +1,109 @@
+---
+layout: layouts/base.njk
+title: "Soutenez AED Congo — Don Environnement"
+permalink: /nous-soutenir/
+description: "Faites un don pour soutenir la protection de l'environnement et le développement durable au Congo. Déduction fiscale possible."
+keywords: "don environnement Congo, parrainage écologie, soutien ONG Congo, protection Bassin du Congo, reçu fiscal"
+hero:
+  title: "Soutenez l'action de l'AED Congo"
+  subtitle: "Votre don finance directement la protection de la biodiversité et le développement durable au Bassin du Congo."
+impacts:
+  impact_p: "Avec 50 €, vous financez la participation d'un expert AED à une réunion internationale sur les conventions environnementales."
+  impact_m: "Avec 10 €/mois, vous permettez à l'AED de maintenir ses activités de suivi des conventions environnementales toute l'année."
+---
+
+<div class="page-banner">
+    <div class="container">
+        <div class="page-banner-content">
+            <h1>{{ hero.title }}</h1>
+            <p><span class="highlight">{{ hero.subtitle }}</span></p>
+        </div>
+    </div>
+</div>
+
+<main id="main-content">
+<div class="container">
+<div class="don-layout">
+
+<!-- ─── LEFT COLUMN ─── -->
+<div>
+  <!-- Step indicators -->
+  <div class="steps-indicator" aria-label="Étapes">
+    <div class="step active" id="si1"><div class="step-num">1</div><span>Mon don</span></div>
+    <div class="step-connector" id="sc1"></div>
+    <div class="step" id="si2"><div class="step-num">2</div><span>Coordonnées</span></div>
+    <div class="step-connector" id="sc2"></div>
+    <div class="step" id="si3"><div class="step-num">3</div><span>Règlement</span></div>
+  </div>
+
+  <form id="donForm" novalidate name="soutenir" method="POST" data-stripe-key="{{ site.stripePublicKey }}">
+    <input type="hidden" name="form-name" value="soutenir">
+
+    <!-- ═══ STEP 1 ═══ -->
+    <div class="card-section" id="step1">
+      <h3><span class="step-lbl" aria-hidden="true">1</span> Je choisis mon don</h3>
+
+      <div class="don-tabs" role="tablist" aria-label="Fréquence">
+        <button type="button" class="don-tab active" id="tab-p" role="tab" aria-selected="true" onclick="switchTab('p')">💳 Don ponctuel</button>
+        <button type="button" class="don-tab" id="tab-m" role="tab" aria-selected="false" onclick="switchTab('m')">🔁 Don mensuel</button>
+      </div>
+
+      <!-- Ponctuel -->
+      <div class="tab-content active" id="panel-p" role="tabpanel">
+        <div class="amount-grid" role="group" aria-label="Montants ponctuels">
+          <button type="button" class="amount-btn" data-a="5" onclick="selAmt(this,'p')">5 €<small>soit 1,70 €</small></button>
+          <button type="button" class="amount-btn" data-a="10" onclick="selAmt(this,'p')">10 €<small>soit 3,40 €</small></button>
+          <button type="button" class="amount-btn" data-a="25" onclick="selAmt(this,'p')">25 €<small>soit 8,50 €</small></button>
+          <button type="button" class="amount-btn selected" data-a="50" onclick="selAmt(this,'p')">50 €<small>soit 17 €</small></button>
+        </div>
+        <div class="amount-libre-row">
+          <label for="libre-p">Montant libre</label>
+          <input type="number" id="libre-p" class="amount-libre-input" min="5" placeholder="Autre montant" oninput="freeAmt('p')" aria-label="Montant libre ponctuel">
+          <span class="amount-suffix">€</span>
+        </div>
+        <div class="contrepartie-box">
+          <div class="contrepartie-img">🌱</div>
+          <div class="contrepartie-text">
+            <strong>Pour tout don ≥ 50 €</strong>
+            Recevez le kit de semences nectarifères du Bassin du Congo et notre rapport annuel d'activité.
+          </div>
+        </div>
+        <div class="impact-teaser">
+          <span class="ico">🌳</span>
+          <span id="impact-txt">{{ impacts.impact_p | safe }}</span>
+        </div>
+      </div>
+
+      <!-- Mensuel -->
+      <div class="tab-content" id="panel-m" role="tabpanel">
+        <div class="amount-grid-3" role="group" aria-label="Montants mensuels">
+          <button type="button" class="amount-btn" data-a="5" onclick="selAmt(this,'m')">5 €<small>/mois</small></button>
+          <button type="button" class="amount-btn selected" data-a="10" onclick="selAmt(this,'m')">10 €<small>/mois</small></button>
+          <button type="button" class="amount-btn" data-a="25" onclick="selAmt(this,'m')">25 €<small>/mois</small></button>
+        </div>
+        <div class="amount-libre-row">
+          <label for="libre-m">Montant libre</label>
+          <input type="number" id="libre-m" class="amount-libre-input" min="3" placeholder="Autre/mois" oninput="freeAmt('m')" aria-label="Montant libre mensuel">
+          <span class="amount-suffix">€/mois</span>
+        </div>
+        <div class="contrepartie-box">
+          <div class="contrepartie-img">🤝</div>
+          <div class="contrepartie-text">
+            <strong>Pour tout don ≥ 10 €/mois</strong>
+            Devenez « Gardien de la Forêt » : accès à nos rapports exclusifs et newsletter bailleurs.
+          </div>
+        </div>
+        <div class="impact-teaser">
+          <span class="ico">♻️</span>
+          <span>{{ impacts.impact_m | safe }}</span>
+        </div>
+      </div>
+    </div><!-- /step1 -->
+
+    <!-- ═══ STEP 2 ═══ -->
+    <div class="card-section" id="step2">
+...
+{% set scripts %}
+<script src="https://js.stripe.com/v3/"></script>
+<script src="/js/donate.js"></script>
+{% endset %}
