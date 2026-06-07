@@ -40,16 +40,19 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.ignores.add("CLAUDE.md");
 
   // Copie des dossiers et fichiers statiques
-  eleventyConfig.addPassthroughCopy("images");
-  eleventyConfig.addPassthroughCopy("css");
-  eleventyConfig.addPassthroughCopy("js");
-  eleventyConfig.addPassthroughCopy("favicon.ico");
-  eleventyConfig.addPassthroughCopy("favicon-32x32.png");
-  eleventyConfig.addPassthroughCopy("favicon-16x16.png");
-  eleventyConfig.addPassthroughCopy("apple-touch-icon.png");
-  eleventyConfig.addPassthroughCopy("site.webmanifest");
-  eleventyConfig.addPassthroughCopy("admin");
-  eleventyConfig.addPassthroughCopy("data");
+// Ces lignes cherchent aussi depuis "content/" — à corriger aussi
+  eleventyConfig.addPassthroughCopy({ "images": "images" });
+  eleventyConfig.addPassthroughCopy({ "css": "css" });
+  eleventyConfig.addPassthroughCopy({ "js": "js" });
+  eleventyConfig.addPassthroughCopy({ "robots.txt": "robots.txt" });
+  eleventyConfig.addPassthroughCopy({ ".htaccess": ".htaccess" });
+  eleventyConfig.addPassthroughCopy({ "favicon.ico": "favicon.ico" });
+  eleventyConfig.addPassthroughCopy({ "favicon-32x32.png": "favicon-32x32.png" });
+  eleventyConfig.addPassthroughCopy({ "favicon-16x16.png": "favicon-16x16.png" });
+  eleventyConfig.addPassthroughCopy({ "apple-touch-icon.png": "apple-touch-icon.png" });
+  eleventyConfig.addPassthroughCopy({ "site.webmanifest": "site.webmanifest" });
+  eleventyConfig.addPassthroughCopy({ "admin": "admin" });
+  eleventyConfig.addPassthroughCopy({ "data": "data" });
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy(".htaccess");
 
