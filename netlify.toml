@@ -18,12 +18,11 @@
 [context.branch-deploy.environment]
   ELEVENTY_ENV = "preview"
 
-# Admin CMS — slash final obligatoire pour Sveltia/Decap
+# Admin CMS — On redirige sans forcer si le slash est déjà présent
 [[redirects]]
   from   = "/admin"
   to     = "/admin/"
   status = 301
-  force  = true
 
 # Canonicalisation des URLs (SEO anti duplicate-content)
 [[redirects]]
