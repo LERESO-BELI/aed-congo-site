@@ -1,0 +1,5 @@
+{
+  "name": "aed-congo-site-oauth",
+  "main": "oauth-worker.js",
+  "compatibility_date": "2024-06-07"
+}
