@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch: # Permet de lancer le déploiement manuellement si besoin
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -37,7 +37,6 @@ jobs:
           deploy-message: "Deploy from GitHub Actions (Zero Cost Build)"
           enable-pull-request-comment: false
           enable-commit-comment: true
-          over-write-all-properties: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

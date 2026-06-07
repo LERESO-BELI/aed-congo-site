@@ -1,52 +1,20 @@
-# ── Configuration Infomaniak AED Congo ───────────────────────
+# ── Configuration AED Congo (Netlify Optimized) ───────────────────────
 
-# 1. Forcer le HTTPS et retirer le WWW
+# Note: La plupart des configurations (HTTPS, Security Headers, Redirects) 
+# sont désormais gérées par le fichier netlify.toml pour plus de performance.
+
+# 1. URLs Propres (Supprimer le .html pour les serveurs classiques)
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# 2. URLs Propres (Supprimer le .html)
-# Si l'URL demandée n'est pas un dossier et qu'en ajoutant .html c'est un fichier, on l'utilise
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [NC,L]
 
-# 3. Redirections de compatibilité (Anciennes URLs vers nouvelles structures)
+# 2. Redirections de compatibilité (Anciennes URLs vers nouvelles structures)
 RewriteRule ^index\.html$ / [R=301,L]
 RewriteRule ^aed-main-page\.html$ / [R=301,L]
 RewriteRule ^aed-studies-improved\.html$ /etudes/ [R=301,L]
 RewriteRule ^nos-actions\.html$ /actions/ [R=301,L]
 RewriteRule ^page-nous-soutenir\.html$ /nous-soutenir/ [R=301,L]
 
-# 4. Page d'erreur 404 personnalisée
+# 3. Page d'erreur 404
 ErrorDocument 404 /404.html
-
-# 5. En-têtes de sécurité
-<IfModule mod_headers.c>
-    Header set X-Frame-Options "SAMEORIGIN"
-    Header set X-XSS-Protection "1; mode=block"
-    Header set X-Content-Type-Options "nosniff"
-    Header set Referrer-Policy "strict-origin-when-cross-origin"
-    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
-    # CSP strictement conforme (sans unsafe-inline)
-    Header set Content-Security-Policy "default-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://js.stripe.com https://identity.netlify.com; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com https://js.stripe.com; frame-src https://js.stripe.com https://www.paypal.com; connect-src 'self' https://www.google-analytics.com https://api.stripe.com;"
-</IfModule>
-
-# 6. Cache navigateur (Performance)
-<IfModule mod_expires.c>
-    ExpiresActive On
-    ExpiresDefault "access plus 1 month"
-    ExpiresByType image/x-icon "access plus 1 year"
-    ExpiresByType image/jpeg "access plus 1 year"
-    ExpiresByType image/png "access plus 1 year"
-    ExpiresByType image/svg+xml "access plus 1 year"
-    ExpiresByType text/css "access plus 1 month"
-    ExpiresByType application/javascript "access plus 1 month"
-</IfModule>
-
-# 7. Compression Gzip
-<IfModule mod_deflate.c>
-    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json
-</IfModule>
