@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: LERESO-BELI/aed-congo-site
   branch: main
+  base_url: https://aed-congo-oauth.lereso-beli.workers.dev
+  auth_endpoint: /auth
 
 media_folder: "images"
 public_folder: "/images"
