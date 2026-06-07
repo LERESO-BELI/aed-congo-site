@@ -1,0 +1,9 @@
+# Headers de sécurité pour Cloudflare Pages
+
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(self)
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://js.stripe.com https://www.paypalobjects.com https://www.paypal.com https://api.web3forms.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.paypalobjects.com; connect-src 'self' https://api.web3forms.com https://api.stripe.com; frame-src https://js.stripe.com https://www.paypal.com https://hooks.stripe.com; object-src 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com;

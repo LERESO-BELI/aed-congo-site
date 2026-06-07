@@ -1,0 +1,14 @@
+# Redirections pour Cloudflare Pages
+
+# Admin CMS
+/admin  /admin/  301
+
+# URLs Propres & Compatibilité
+/index.html  /  301
+/aed-main-page.html  /  301
+/aed-studies-improved.html  /etudes/  301
+/nos-actions.html  /actions/  301
+/page-nous-soutenir.html  /nous-soutenir/  301
+
+# Fallback 404
+/*  /404.html  404
