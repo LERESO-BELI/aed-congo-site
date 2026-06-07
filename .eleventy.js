@@ -53,8 +53,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "site.webmanifest": "site.webmanifest" });
   eleventyConfig.addPassthroughCopy({ "admin": "admin" });
   eleventyConfig.addPassthroughCopy({ "data": "data" });
-  eleventyConfig.addPassthroughCopy("robots.txt");
-  eleventyConfig.addPassthroughCopy(".htaccess");
+  eleventyConfig.addPassthroughCopy({ "robots.txt": "robots.txt" });
+  eleventyConfig.addPassthroughCopy({ ".htaccess" : ".htaccess" });
 
   return {
     dir: {
