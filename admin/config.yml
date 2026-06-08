@@ -2,8 +2,8 @@ backend:
   name: github
   repo: LERESO-BELI/aed-congo-site
   branch: main
-  base_url: https://aed-congo-oauth.lereso-beli.workers.dev
-  auth_endpoint: /auth
+  base_url: https://aed-congo-site-oauth.lerebonsolidaire.workers.dev
+  auth_endpoint: auth
 
 media_folder: "images"
 public_folder: "/images"
