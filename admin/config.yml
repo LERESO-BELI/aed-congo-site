@@ -66,7 +66,7 @@ collections:
     fields:
       - {label: "Titre", name: "title", widget: "string"}
       - {label: "Catégorie", name: "type", widget: "select", options: ["action", "campagne", "temoignage"]}
-      - {label: "Date", name: "date", widget: "string", required: false}
+      - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false, required: false}
       - {label: "Lieu", name: "location", widget: "string", required: false}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Résultat / Impact", name: "impact", widget: "string", required: false}

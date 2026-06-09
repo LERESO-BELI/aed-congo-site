@@ -102,7 +102,130 @@ impacts:
 
     <!-- ═══ STEP 2 ═══ -->
     <div class="card-section" id="step2">
-...
+        <h3><span class="step-lbl" aria-hidden="true">2</span> Mes coordonnées</h3>
+        <p style="font-size:13px;color:var(--text-muted);margin-bottom:16px">
+          Ces informations sont indispensables pour l'émission de votre reçu fiscal.
+          <span style="color:var(--accent);font-weight:600">*</span> Champs obligatoires.
+        </p>
+  
+        <div class="form-row" style="grid-template-columns:1fr;margin-bottom:12px">
+          <div class="form-group">
+            <label class="form-label" for="email">Email <span class="required-star" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="votre@email.com" required autocomplete="email">
+            <span class="err-msg" id="e-email">Adresse email invalide.</span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Civilité <span class="required-star" aria-hidden="true">*</span></label>
+            <div class="civilite-group" role="radiogroup" aria-label="Civilité">
+              <div class="civ-option"><input type="radio" name="civilite" id="civ-m" value="M" checked><label for="civ-m">M.</label></div>
+              <div class="civ-option"><input type="radio" name="civilite" id="civ-mme" value="Mme"><label for="civ-mme">Mme</label></div>
+              <div class="civ-option"><input type="radio" name="civilite" id="civ-org" value="Org"><label for="civ-org">Organisation</label></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="prenom">Prénom <span class="required-star" aria-hidden="true">*</span></label>
+            <input type="text" id="prenom" name="prenom" class="form-input" placeholder="Prénom" required autocomplete="given-name">
+            <span class="err-msg" id="e-prenom">Veuillez saisir votre prénom.</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="nom">Nom <span class="required-star" aria-hidden="true">*</span></label>
+            <input type="text" id="nom" name="nom" class="form-input" placeholder="Nom de famille" required autocomplete="family-name">
+            <span class="err-msg" id="e-nom">Veuillez saisir votre nom.</span>
+          </div>
+        </div>
+
+        <div class="form-row" style="grid-template-columns:1fr">
+          <div class="form-group">
+            <label class="form-label" for="org">Organisation <span style="font-weight:400;opacity:.6">(facultatif)</span></label>
+            <input type="text" id="org" name="organisation" class="form-input" placeholder="Nom de votre organisation" autocomplete="organization">
+          </div>
+        </div>
+
+        <div class="form-row" style="grid-template-columns:1fr">
+          <div class="form-group">
+            <label class="form-label" for="adresse">Adresse <span class="required-star" aria-hidden="true">*</span></label>
+            <input type="text" id="adresse" name="adresse" class="form-input" placeholder="Numéro et rue" required autocomplete="street-address">
+            <span class="err-msg" id="e-adresse">Veuillez saisir votre adresse.</span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="cp">Code postal <span class="required-star" aria-hidden="true">*</span></label>
+            <input type="text" id="cp" name="codePostal" class="form-input" placeholder="00000" required autocomplete="postal-code">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="ville">Ville <span class="required-star" aria-hidden="true">*</span></label>
+            <input type="text" id="ville" name="ville" class="form-input" placeholder="Ville" required autocomplete="address-level2">
+          </div>
+        </div>
+
+        <div class="form-row" style="grid-template-columns:1fr">
+          <div class="form-group">
+            <label class="form-label" for="pays">Pays <span class="required-star" aria-hidden="true">*</span></label>
+            <select id="pays" name="pays" class="form-select" required autocomplete="country">
+              <option value="CG" selected>République du Congo</option>
+              <option value="CD">Congo (RDC)</option>
+              <option value="FR">France</option>
+              <option value="BE">Belgique</option>
+              <option value="CH">Suisse</option>
+              <option value="CM">Cameroun</option>
+              <option value="GA">Gabon</option>
+              <option value="CI">Côte d'Ivoire</option>
+              <option value="SN">Sénégal</option>
+              <option value="MA">Maroc</option>
+              <option value="TN">Tunisie</option>
+              <option value="DZ">Algérie</option>
+              <option value="ZZ">Autre pays</option>
+            </select>
+          </div>
+        </div>
+    </div><!-- /step2 -->
+
+    <!-- ═══ STEP 3 ═══ -->
+    <div class="card-section" id="step3">
+        <h3><span class="step-lbl" aria-hidden="true">3</span> Mon mode de règlement</h3>
+
+        <div class="pay-tabs" role="tablist" aria-label="Modes de paiement">
+          <button type="button" class="pay-tab active" id="pt-card" onclick="switchPay('card')" role="tab" aria-selected="true">💳 Carte</button>
+          <button type="button" class="pay-tab" id="pt-paypal" onclick="switchPay('paypal')" role="tab" aria-selected="false">🌐 PayPal</button>
+          <button type="button" class="pay-tab" id="pt-mobile" onclick="switchPay('mobile')" role="tab" aria-selected="false">📱 Mobile Money</button>
+        </div>
+
+        <div class="pay-panel active" id="pp-card" role="tabpanel">
+          <div id="stripe-container">
+            <div id="card-element" style="padding: 12px; border: 1.5px solid var(--border); border-radius: 8px; background: white;"></div>
+            <div id="card-errors" role="alert" style="color: #e74c3c; font-size: 12px; margin-top: 8px;"></div>
+          </div>
+        </div>
+
+        <div class="pay-panel" id="pp-paypal" role="tabpanel">
+          <div id="paypal-donate-button-container" style="text-align: center; padding: 20px;"></div>
+        </div>
+
+        <div class="pay-panel" id="pp-mobile" role="tabpanel">
+          <div style="background: #e9f7ef; padding: 20px; border-radius: 10px; border: 1px solid #25d366;">
+            <p>Don direct via Airtel/MTN Money au Congo. Contactez-nous sur WhatsApp pour finaliser.</p>
+            <a href="https://wa.me/242069522851" class="btn btn-primary" style="background:#25d366; border:none;">💬 Finaliser via WhatsApp</a>
+          </div>
+        </div>
+
+        <div id="main-submit" style="margin-top: 20px;">
+          <button type="submit" class="btn-submit" id="sub-btn">Finaliser mon don →</button>
+        </div>
+    </div><!-- /step3 -->
+  </form>
+</div>
+</div>
+</div>
+</main>
+
 {% set scripts %}
 <script src="https://js.stripe.com/v3/"></script>
 <script src="/js/donate.js"></script>

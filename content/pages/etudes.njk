@@ -20,8 +20,73 @@ hero:
 
 {% include "partners-banner.html" %}
 
-<div class="main">
-...
+<div class="main-content section-light">
+    <div class="container">
+        <div class="convention-filters">
+            <button class="conv-btn active" data-conv="brs">BRS</button>
+            <button class="conv-btn" data-conv="minamata">Minamata</button>
+            <button class="conv-btn" data-conv="ccnucc">CCNUCC</button>
+            <button class="conv-btn" data-conv="saicm">SAICM</button>
+            <button class="conv-btn" data-conv="cirgl">CIRGL</button>
+        </div>
+
+        {% set conventions = ["brs", "minamata", "ccnucc", "saicm", "cirgl"] %}
+        
+        {% for conv in conventions %}
+        <div id="conv-{{ conv }}" class="convention-section {% if loop.first %}active{% else %}hidden{% endif %}">
+            <div class="content-header">
+                <img src="/images/{{ conv | upper }}.jpg" alt="{{ conv | upper }}" class="conv-header-img" onerror="this.src='/images/logo.jpg'">
+                <div>
+                    <h2>Convention {{ conv | upper }}</h2>
+                    <p>
+                        {% if conv == "brs" %}Bâle, Rotterdam et Stockholm : gestion des déchets dangereux et des polluants organiques persistants.
+                        {% elif conv == "minamata" %}Convention de Minamata sur le mercure : protéger la santé humaine et l'environnement des émissions de mercure.
+                        {% elif conv == "ccnucc" %}Changements Climatiques : atténuation et adaptation face au réchauffement climatique.
+                        {% elif conv == "saicm" %}Approche Stratégique de la Gestion Internationale des Produits Chimiques.
+                        {% elif conv == "cirgl" %}Conférence Internationale sur la Région des Grands Lacs : gestion durable des ressources naturelles.
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+
+            <div class="studies-list">
+                {% set conv_studies = collections.studies | filterByConvention(conv) %}
+                {% for study in conv_studies %}
+                <article class="study-card">
+                    <div class="study-header">
+                        <div style="flex:1;">
+                            <h3>{{ study.data.title }} {% if study.data.pdf %}<span class="pdf-indicator">📄 PDF</span>{% endif %}</h3>
+                            <div class="study-meta">
+                                <span>📅 {{ study.data.year }}</span>
+                                <span>✍️ {{ study.data.authors }}</span>
+                            </div>
+                        </div>
+                        <span class="badge badge-{{ study.data.status }}">
+                            {% if study.data.status == "published" %}Publié
+                            {% elif study.data.status == "progress" %}En cours
+                            {% else %}{{ study.data.status }}{% endif %}
+                        </span>
+                    </div>
+                    <div class="study-body">
+                        <p>{{ study.data.desc }}</p>
+                        {% if study.data.pdf %}
+                        <div class="actions">
+                            <a href="{{ study.data.pdf }}" class="btn btn-primary" target="_blank">📥 Télécharger PDF</a>
+                        </div>
+                        {% endif %}
+                    </div>
+                </article>
+                {% else %}
+                <div class="empty-state">
+                    <p>Aucune étude disponible pour cette convention.</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
 {% set scripts %}
 <script src="/js/studies.js"></script>
 {% endset %}

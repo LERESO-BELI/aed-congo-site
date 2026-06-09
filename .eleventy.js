@@ -1,6 +1,11 @@
 module.exports = function(eleventyConfig) {
   eleventyConfig.addGlobalData("web3formsKey", process.env.WEB3FORMS_KEY || "e6722875-71d5-4d02-bd98-9f36e7568782");
 
+  // Filtre pour grouper les études par convention
+  eleventyConfig.addFilter("filterByConvention", (collection, convention) => {
+    return collection.filter(item => item.data.convention === convention);
+  });
+
   // Collections optimisées
   eleventyConfig.addCollection("studies", col =>
     col.getFilteredByGlob("content/studies/*.md")

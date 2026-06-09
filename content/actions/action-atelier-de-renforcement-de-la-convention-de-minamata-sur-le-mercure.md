@@ -1,7 +1,7 @@
 ---
 title: atelier de renforcement de la Convention de Minamata sur le mercure
 type: action
-date: 19/06/2026
+date: 2026-06-19
 location: Pointe-Noire
 image: ''
 impact: Approbation des amendements

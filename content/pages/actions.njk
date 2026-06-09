@@ -21,7 +21,142 @@ hero:
 {% include "partners-banner.html" %}
 
 <div class="tabs-section">
-...
+    <div class="container">
+        <div class="tabs-container">
+            <div class="tabs-header" role="tablist">
+                <button class="tab-btn active" data-tab="actions" role="tab" aria-selected="true">📋 Actions Terrain</button>
+                <button class="tab-btn" data-tab="campagnes" role="tab" aria-selected="false">📢 Campagnes</button>
+                <button class="tab-btn" data-tab="temoignages" role="tab" aria-selected="false">🎥 Témoignages</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main-content">
+    <!-- TAB 1: ACTIONS TERRAIN -->
+    <div id="tab-actions" class="tab-content active">
+        <section class="section-light">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label">Projets Réalisés</div>
+                    <h2 class="section-title">Nos Actions sur le Terrain</h2>
+                    <p class="section-description">Des interventions concrètes pour la protection de l'environnement et l'amélioration des conditions de vie des communautés locales</p>
+                </div>
+                
+                <div class="actions-grid">
+                    {% for action in collections.actions_list %}
+                    <article class="action-card">
+                        {% if action.data.image %}
+                        <img class="action-image" src="{{ action.data.image }}" alt="{{ action.data.title }}" loading="lazy">
+                        {% else %}
+                        <div class="action-image-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <circle cx="8.5" cy="8.5" r="1.5"/>
+                                <polyline points="21 15 16 10 5 21"/>
+                            </svg>
+                        </div>
+                        {% endif %}
+                        <div class="action-content">
+                            <div class="action-date">📅 {{ action.data.date }}</div>
+                            <h3 class="action-title">{{ action.data.title }}</h3>
+                            <div class="action-description">{{ action.templateContent | safe | truncate(120) }}</div>
+                            <div class="action-meta">
+                                {% if action.data.location %}
+                                <span class="action-tag">📍 {{ action.data.location }}</span>
+                                {% endif %}
+                                {% if action.data.impact %}
+                                <span class="action-tag">✨ {{ action.data.impact }}</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </article>
+                    {% else %}
+                    <div class="empty-state">
+                        <p>Aucune action publiée pour le moment.</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- TAB 2: CAMPAGNES -->
+    <div id="tab-campagnes" class="tab-content hidden">
+        <section class="section-light">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label">Sensibilisation</div>
+                    <h2 class="section-title">Nos Campagnes</h2>
+                    <p class="section-description">Éducation environnementale et mobilisation communautaire pour un changement durable</p>
+                </div>
+                
+                <div class="actions-grid">
+                    {% for campagne in collections.campagnes %}
+                    <article class="action-card">
+                        {% if campagne.data.image %}
+                        <img class="action-image" src="{{ campagne.data.image }}" alt="{{ campagne.data.title }}" loading="lazy">
+                        {% endif %}
+                        <div class="action-content">
+                            <div class="action-date">📅 {{ campagne.data.date }}</div>
+                            <h3 class="action-title">{{ campagne.data.title }}</h3>
+                            <div class="action-description">{{ campagne.templateContent | safe | truncate(120) }}</div>
+                            <div class="action-meta">
+                                {% if campagne.data.location %}
+                                <span class="action-tag">📍 {{ campagne.data.location }}</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </article>
+                    {% else %}
+                    <div class="empty-state">
+                        <p>Aucune campagne publiée pour le moment.</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- TAB 3: TÉMOIGNAGES -->
+    <div id="tab-temoignages" class="tab-content hidden">
+        <section class="section-light">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label">Partenaires & Bénéficiaires</div>
+                    <h2 class="section-title">Témoignages</h2>
+                    <p class="section-description">Écoutez les témoignages de nos partenaires clés et des communautés bénéficiaires</p>
+                </div>
+                
+                <div class="testimonials-grid">
+                    {% for temoignage in collections.temoignages %}
+                    <article class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"{{ temoignage.templateContent | safe | truncate(200) }}"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            {% if temoignage.data.image %}
+                            <img src="{{ temoignage.data.image }}" alt="{{ temoignage.data.author }}" class="author-img">
+                            {% endif %}
+                            <div class="author-info">
+                                <strong>{{ temoignage.data.author }}</strong>
+                                {% if temoignage.data.location %}
+                                <span>{{ temoignage.data.location }}</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </article>
+                    {% else %}
+                    <div class="empty-state">
+                        <p>Aucun témoignage publié pour le moment.</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
 {% set scripts %}
 <script src="/js/actions.js"></script>
 {% endset %}
