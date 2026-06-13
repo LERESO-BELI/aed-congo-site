@@ -6,6 +6,12 @@ module.exports = function(eleventyConfig) {
     return collection.filter(item => item.data.convention === convention);
   });
 
+  eleventyConfig.addFilter("readableDate", (dateObj) => {
+    if (!dateObj) return "";
+    const date = new Date(dateObj);
+    return new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }).format(date);
+  });
+
   // Collections optimisées
   eleventyConfig.addCollection("studies", col =>
     col.getFilteredByGlob("content/studies/*.md")

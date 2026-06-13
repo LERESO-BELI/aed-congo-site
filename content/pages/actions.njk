@@ -58,7 +58,7 @@ hero:
                         </div>
                         {% endif %}
                         <div class="action-content">
-                            <div class="action-date">📅 {{ action.data.date }}</div>
+                            <div class="action-date">📅 {{ action.data.date | readableDate }}</div>
                             <h3 class="action-title">{{ action.data.title }}</h3>
                             <div class="action-description">{{ action.templateContent | safe | truncate(120) }}</div>
                             <div class="action-meta">
@@ -98,7 +98,7 @@ hero:
                         <img class="action-image" src="{{ campagne.data.image }}" alt="{{ campagne.data.title }}" loading="lazy">
                         {% endif %}
                         <div class="action-content">
-                            <div class="action-date">📅 {{ campagne.data.date }}</div>
+                            <div class="action-date">📅 {{ campagne.data.date | readableDate }}</div>
                             <h3 class="action-title">{{ campagne.data.title }}</h3>
                             <div class="action-description">{{ campagne.templateContent | safe | truncate(120) }}</div>
                             <div class="action-meta">

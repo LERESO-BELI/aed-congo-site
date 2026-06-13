@@ -11,8 +11,14 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.setAttribute('aria-selected', 'true');
         
         // Update Panels
-        document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
+        document.querySelectorAll('.main-content > .tab-content').forEach(c => {
+            c.classList.add('hidden');
+            c.classList.remove('active');
+        });
         const target = document.getElementById('tab-' + tabId);
-        if (target) target.classList.remove('hidden');
+        if (target) {
+            target.classList.remove('hidden');
+            target.classList.add('active');
+        }
     });
 });

@@ -56,6 +56,10 @@ impacts:
           <button type="button" class="amount-btn" data-a="25" onclick="selAmt(this,'p')">25 €<small>soit 8,50 €</small></button>
           <button type="button" class="amount-btn selected" data-a="50" onclick="selAmt(this,'p')">50 €<small>soit 17 €</small></button>
         </div>
+        <div class="amount-recap" style="margin: 20px 0; padding: 20px; background: var(--bg-green-pale); border-radius: 8px; text-align: center;">
+            <div class="recap-amount"><span id="r-amt">50</span> €</div>
+            <div class="fiscal-note" id="r-fiscal">soit 17 € après déduction fiscale</div>
+        </div>
         <div class="amount-libre-row">
           <label for="libre-p">Montant libre</label>
           <input type="number" id="libre-p" class="amount-libre-input" min="5" placeholder="Autre montant" oninput="freeAmt('p')" aria-label="Montant libre ponctuel">
@@ -185,6 +189,13 @@ impacts:
               <option value="ZZ">Autre pays</option>
             </select>
           </div>
+        </div>
+
+        <div class="rgpd-consent-row">
+            <input type="checkbox" id="consent_rgpd" name="consent_rgpd" class="rgpd-checkbox" required>
+            <label for="consent_rgpd" class="rgpd-label">
+                J'accepte que l'AED Congo traite mes données personnelles pour l'émission de mon reçu fiscal et le suivi de mon don, conformément à la politique de confidentialité.
+            </label>
         </div>
     </div><!-- /step2 -->
 
