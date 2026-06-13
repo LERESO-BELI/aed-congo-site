@@ -11,9 +11,12 @@ let galleryImages = [
 const jsonData = document.getElementById('slideshow-data');
 if (jsonData) {
     try {
-        const customImages = JSON.parse(jsonData.textContent);
-        if (Array.isArray(customImages) && customImages.length > 0) {
-            galleryImages = customImages;
+        const customImages = JSON.parse(jsonData.textContent.trim());
+        if (customImages && Array.isArray(customImages) && customImages.length > 0) {
+            galleryImages = customImages.map(img => ({
+                src: img.src.startsWith('/') ? img.src : '/' + img.src,
+                caption: img.caption || ''
+            }));
         }
     } catch (e) {
         console.error("Erreur lors de la lecture des données du diaporama:", e);

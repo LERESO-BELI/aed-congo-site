@@ -288,10 +288,16 @@ footer { background: #1e2a16; color: rgba(255,255,255,.78); padding: 40px 0; }
 /* Tabs system */
 .tabs-section { padding-top: 40px; }
 .tabs-container { border-bottom: 2px solid var(--border); }
-.tabs-header { display: flex; gap: 30px; }
+.tabs-header { display: flex; gap: 30px; justify-content: center; }
 .tab-btn { padding: 15px 5px; border: none; background: none; font-weight: 700; font-size: 16px; color: var(--text-muted); cursor: pointer; position: relative; border-bottom: 3px solid transparent; transition: all 0.2s; }
 .tab-btn:hover { color: var(--primary); }
 .tab-btn.active { color: var(--primary); border-color: var(--primary); }
+
+.main-content > .tab-content { display: none; }
+.main-content > .tab-content.active { display: block !important; }
+
+.convention-section { display: none; }
+.convention-section.active { display: block !important; }
 
 /* Responsive */
 @media (max-width: 768px) {

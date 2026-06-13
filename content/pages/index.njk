@@ -9,6 +9,17 @@ presentation:
   text2: Nous prenons toutes les initiatives pour le développement harmonieux des populations en nous appuyant sur les actions liées à la protection de l'environnement et au développement durable.
   signature_name: Dr LOUBAKI Eugène
   signature_role: Président de l'AED
+slideshow:
+  - src: /images/equipe.jpg
+    caption: Atelier de Sensibilisation
+  - src: /images/congres1.jpg
+    caption: Formation des communautés locales
+  - src: /images/conference1.jpg
+    caption: Conférence environnementale
+  - src: /images/parisvillage.jpg
+    caption: Sensibilisation environnementale
+  - src: /images/hero.jpg
+    caption: Conservation des forêts
 activites:
   title: Champ d'actions
   subtitle: 'Découvrez nos principales réalisations et projets en cours :'
@@ -308,5 +319,8 @@ objectifs:
 </div>
 
 {% set scripts %}
+<script type="application/json" id="slideshow-data">
+{{ (slideshow | dump | safe) if slideshow else "[]" }}
+</script>
 <script src="/js/home.js"></script>
 {% endset %}

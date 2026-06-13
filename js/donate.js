@@ -144,4 +144,27 @@ if (form) {
     });
 }
 
-document.addEventListener('DOMContentLoaded', updateRecap);
+document.addEventListener('DOMContentLoaded', () => {
+    updateRecap();
+
+    // Event listeners for tabs and buttons (CSP Compliance)
+    document.querySelectorAll('[data-don-tab]').forEach(btn => {
+        btn.addEventListener('click', () => switchTab(btn.dataset.donTab));
+    });
+    
+    document.querySelectorAll('[data-amt]').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const panel = btn.closest('.tab-content');
+            const t = panel.id === 'panel-p' ? 'p' : 'm';
+            selAmt(btn, t);
+        });
+    });
+    
+    document.querySelectorAll('[data-pay-tab]').forEach(btn => {
+        btn.addEventListener('click', () => switchPay(btn.dataset.payTab));
+    });
+    
+    document.querySelectorAll('[data-free-amt]').forEach(input => {
+        input.addEventListener('input', () => freeAmt(input.dataset.freeAmt));
+    });
+});

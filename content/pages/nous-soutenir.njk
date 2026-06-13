@@ -44,17 +44,17 @@ impacts:
       <h3><span class="step-lbl" aria-hidden="true">1</span> Je choisis mon don</h3>
 
       <div class="don-tabs" role="tablist" aria-label="Fréquence">
-        <button type="button" class="don-tab active" id="tab-p" role="tab" aria-selected="true" onclick="switchTab('p')">💳 Don ponctuel</button>
-        <button type="button" class="don-tab" id="tab-m" role="tab" aria-selected="false" onclick="switchTab('m')">🔁 Don mensuel</button>
+        <button type="button" class="don-tab active" id="tab-p" role="tab" aria-selected="true" data-don-tab="p">💳 Don ponctuel</button>
+        <button type="button" class="don-tab" id="tab-m" role="tab" aria-selected="false" data-don-tab="m">🔁 Don mensuel</button>
       </div>
 
       <!-- Ponctuel -->
       <div class="tab-content active" id="panel-p" role="tabpanel">
         <div class="amount-grid" role="group" aria-label="Montants ponctuels">
-          <button type="button" class="amount-btn" data-a="5" onclick="selAmt(this,'p')">5 €<small>soit 1,70 €</small></button>
-          <button type="button" class="amount-btn" data-a="10" onclick="selAmt(this,'p')">10 €<small>soit 3,40 €</small></button>
-          <button type="button" class="amount-btn" data-a="25" onclick="selAmt(this,'p')">25 €<small>soit 8,50 €</small></button>
-          <button type="button" class="amount-btn selected" data-a="50" onclick="selAmt(this,'p')">50 €<small>soit 17 €</small></button>
+          <button type="button" class="amount-btn" data-a="5" data-amt="5">5 €<small>soit 1,70 €</small></button>
+          <button type="button" class="amount-btn" data-a="10" data-amt="10">10 €<small>soit 3,40 €</small></button>
+          <button type="button" class="amount-btn" data-a="25" data-amt="25">25 €<small>soit 8,50 €</small></button>
+          <button type="button" class="amount-btn selected" data-a="50" data-amt="50">50 €<small>soit 17 €</small></button>
         </div>
         <div class="amount-recap" style="margin: 20px 0; padding: 20px; background: var(--bg-green-pale); border-radius: 8px; text-align: center;">
             <div class="recap-amount"><span id="r-amt">50</span> €</div>
@@ -62,7 +62,7 @@ impacts:
         </div>
         <div class="amount-libre-row">
           <label for="libre-p">Montant libre</label>
-          <input type="number" id="libre-p" class="amount-libre-input" min="5" placeholder="Autre montant" oninput="freeAmt('p')" aria-label="Montant libre ponctuel">
+          <input type="number" id="libre-p" class="amount-libre-input" min="5" placeholder="Autre montant" data-free-amt="p" aria-label="Montant libre ponctuel">
           <span class="amount-suffix">€</span>
         </div>
         <div class="contrepartie-box">
@@ -81,13 +81,13 @@ impacts:
       <!-- Mensuel -->
       <div class="tab-content" id="panel-m" role="tabpanel">
         <div class="amount-grid-3" role="group" aria-label="Montants mensuels">
-          <button type="button" class="amount-btn" data-a="5" onclick="selAmt(this,'m')">5 €<small>/mois</small></button>
-          <button type="button" class="amount-btn selected" data-a="10" onclick="selAmt(this,'m')">10 €<small>/mois</small></button>
-          <button type="button" class="amount-btn" data-a="25" onclick="selAmt(this,'m')">25 €<small>/mois</small></button>
+          <button type="button" class="amount-btn" data-a="5" data-amt="5">5 €<small>/mois</small></button>
+          <button type="button" class="amount-btn selected" data-a="10" data-amt="10">10 €<small>/mois</small></button>
+          <button type="button" class="amount-btn" data-a="25" data-amt="25">25 €<small>/mois</small></button>
         </div>
         <div class="amount-libre-row">
           <label for="libre-m">Montant libre</label>
-          <input type="number" id="libre-m" class="amount-libre-input" min="3" placeholder="Autre/mois" oninput="freeAmt('m')" aria-label="Montant libre mensuel">
+          <input type="number" id="libre-m" class="amount-libre-input" min="3" placeholder="Autre/mois" data-free-amt="m" aria-label="Montant libre mensuel">
           <span class="amount-suffix">€/mois</span>
         </div>
         <div class="contrepartie-box">
@@ -204,9 +204,9 @@ impacts:
         <h3><span class="step-lbl" aria-hidden="true">3</span> Mon mode de règlement</h3>
 
         <div class="pay-tabs" role="tablist" aria-label="Modes de paiement">
-          <button type="button" class="pay-tab active" id="pt-card" onclick="switchPay('card')" role="tab" aria-selected="true">💳 Carte</button>
-          <button type="button" class="pay-tab" id="pt-paypal" onclick="switchPay('paypal')" role="tab" aria-selected="false">🌐 PayPal</button>
-          <button type="button" class="pay-tab" id="pt-mobile" onclick="switchPay('mobile')" role="tab" aria-selected="false">📱 Mobile Money</button>
+          <button type="button" class="pay-tab active" id="pt-card" data-pay-tab="card" role="tab" aria-selected="true">💳 Carte</button>
+          <button type="button" class="pay-tab" id="pt-paypal" data-pay-tab="paypal" role="tab" aria-selected="false">🌐 PayPal</button>
+          <button type="button" class="pay-tab" id="pt-mobile" data-pay-tab="mobile" role="tab" aria-selected="false">📱 Mobile Money</button>
         </div>
 
         <div class="pay-panel active" id="pp-card" role="tabpanel">
