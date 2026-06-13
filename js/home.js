@@ -9,14 +9,17 @@ let galleryImages = [
 
 // Tentative de récupération des données dynamiques
 const jsonData = document.getElementById('slideshow-data');
+console.log("Diaporama - JSON trouvé:", !!jsonData);
 if (jsonData) {
     try {
         const customImages = JSON.parse(jsonData.textContent.trim());
+        console.log("Diaporama - Données brutes:", customImages);
         if (customImages && Array.isArray(customImages) && customImages.length > 0) {
             galleryImages = customImages.map(img => ({
                 src: img.src.startsWith('/') ? img.src : '/' + img.src,
                 caption: img.caption || ''
             }));
+            console.log("Diaporama - Images chargées:", galleryImages);
         }
     } catch (e) {
         console.error("Erreur lors de la lecture des données du diaporama:", e);

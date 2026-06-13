@@ -293,8 +293,8 @@ footer { background: #1e2a16; color: rgba(255,255,255,.78); padding: 40px 0; }
 .tab-btn:hover { color: var(--primary); }
 .tab-btn.active { color: var(--primary); border-color: var(--primary); }
 
-.main-content > .tab-content { display: none; }
-.main-content > .tab-content.active { display: block !important; }
+.tab-content { display: none; }
+.tab-content.active { display: block !important; }
 
 .convention-section { display: none; }
 .convention-section.active { display: block !important; }
