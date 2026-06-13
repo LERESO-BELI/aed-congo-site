@@ -33,6 +33,12 @@ collections:
               - {label: "Paragraphe 2", name: "text2", widget: "text"}
               - {label: "Nom du signataire", name: "signature_name", widget: "string"}
               - {label: "Poste du signataire", name: "signature_role", widget: "string"}
+          - label: "Diaporama (Slideshow)"
+            name: "slideshow"
+            widget: "list"
+            fields:
+              - {label: "Image", name: "src", widget: "image"}
+              - {label: "Légende", name: "caption", widget: "string"}
 
       - label: "Page Nous Soutenir"
         name: "soutenir"

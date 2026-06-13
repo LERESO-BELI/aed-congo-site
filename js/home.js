@@ -1,11 +1,24 @@
 // ── Galerie de photos ──
-const galleryImages = [
+let galleryImages = [
     { src: '/images/equipe.jpg',      caption: 'Atelier de Sensibilisation' },
     { src: '/images/congres1.jpg',     caption: 'Formation des communautés locales' },
     { src: '/images/conference1.jpg',  caption: 'Conférence environnementale' },
     { src: '/images/parisvillage.jpg', caption: 'Sensibilisation environnementale' },
     { src: '/images/hero.jpg', caption: 'Conservation des forêts' }
 ];
+
+// Tentative de récupération des données dynamiques
+const jsonData = document.getElementById('slideshow-data');
+if (jsonData) {
+    try {
+        const customImages = JSON.parse(jsonData.textContent);
+        if (Array.isArray(customImages) && customImages.length > 0) {
+            galleryImages = customImages;
+        }
+    } catch (e) {
+        console.error("Erreur lors de la lecture des données du diaporama:", e);
+    }
+}
 
 let currentLightboxIndex = 0;
 
